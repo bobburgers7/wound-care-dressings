@@ -114,104 +114,66 @@ show-frequency: false) = {
   // Primary Dressings Header
   table-rows.push((
     table.cell(colspan: 4, fill: rgb("#E6F3FF"), stroke: 1pt)[
-      #text(weight: "bold", size: 12pt)[PRIMARY DRESSINGS]
+      #text(weight: "bold", size: 12pt)[COMMONLY ORDERED OINTMENTS AND GELS]
     ]
   ))
   
   // Table headers
   table-rows.push((
-    [*Category*], [*Name*], [*Indication*], [*Change Frequency*]
+    [*Name*], [*Type*], [*Indication & Description*], [*Notes*]
   ))
   
-  // Low Exudate Section
-  table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#F0F8FF"), stroke: 0.5pt)[
-      #text(weight: "bold", size: 10pt)[Low Exudate]
-    ]
-  ))
-  
-  for item in dressing-ids.primary.low {
+  // Ointments and Gels
+  for item in dressing-ids.ointments.topical {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      [#info.category], 
-      [#info.name], 
+      [#text(weight: "bold")[#info.name]], 
       [#info.indication], 
-      [#info.frequency]
+      [#info.description], 
+      [Change: #info.frequency]
     ))
   }
   
-  // Moderate Exudate Section
+  // Note about oil emulsion gauze
   table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#F0F8FF"), stroke: 0.5pt)[
-      #text(weight: "bold", size: 10pt)[Moderate Exudate]
+    table.cell(colspan: 4, fill: rgb("#FFFACD"), stroke: 0.5pt)[
+      #text(size: 9pt, style: "italic")[Each of these can be spread over a piece of oil emulsion gauze first, then applied to the wound, to ensure coverage of the wound bed.]
     ]
   ))
   
-  for item in dressing-ids.primary.moderate {
-    let info = dressing-info.at(item.id)
-    table-rows.push((
-      [#info.category], 
-      [#info.name], 
-      [#info.indication], 
-      [#info.frequency]
-    ))
-  }
-  
-  // Heavy Exudate Section
-  table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#F0F8FF"), stroke: 0.5pt)[
-      #text(weight: "bold", size: 10pt)[Heavy Exudate]
-    ]
-  ))
-  
-  for item in dressing-ids.primary.heavy {
-    let info = dressing-info.at(item.id)
-    table-rows.push((
-      [#info.category], 
-      [#info.name], 
-      [#info.indication], 
-      [#info.frequency]
-    ))
-  }
-  
-  // Secondary & Specialty Header
+  // Wound Fillers Header
   table-rows.push((
     table.cell(colspan: 4, fill: rgb("#E6FFE6"), stroke: 1pt)[
-      #text(weight: "bold", size: 12pt)[SECONDARY & SPECIALTY]
+      #text(weight: "bold", size: 12pt)[COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS]
     ]
   ))
   
-  // Secondary Section
-  table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#F0FFF0"), stroke: 0.5pt)[
-      #text(weight: "bold", size: 10pt)[Secondary Dressings]
-    ]
-  ))
-  
-  for item in dressing-ids.secondary.standard {
+  // Fillers and Medicated Dressings
+  for item in dressing-ids.fillers.medicated {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      [#info.category], 
-      [#info.name], 
+      [#text(weight: "bold")[#info.name]], 
       [#info.indication], 
-      [#info.frequency]
+      [#info.description], 
+      [Change: #info.frequency]
     ))
   }
   
-  // Antimicrobial Section
+  // Cover Dressings Header
   table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#F0FFF0"), stroke: 0.5pt)[
-      #text(weight: "bold", size: 10pt)[Antimicrobial]
+    table.cell(colspan: 4, fill: rgb("#FFE6E6"), stroke: 1pt)[
+      #text(weight: "bold", size: 12pt)[COMMONLY ORDERED COVER DRESSINGS]
     ]
   ))
   
-  for item in dressing-ids.specialty.antimicrobial {
+  // Cover Dressings
+  for item in dressing-ids.covers.secondary {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      [#info.category], 
-      [#info.name], 
+      [#text(weight: "bold")[#info.name]], 
       [#info.indication], 
-      [#info.frequency]
+      [#info.description], 
+      [Change: #info.frequency]
     ))
   }
   
@@ -230,61 +192,152 @@ show-frequency: false) = {
   ]
 }
 
-// Example usage with sample data structure:
-#let sample-dressing-info = (
-  "hydrocolloid001": (
-    category: "primary",
-    name: "Hydrocolloid",
-    indication: "Light-moderate exudate",
-    description: "Self-adhesive, occlusive, promotes autolysis",
-    frequency: "3-7 days",
-    contraindications: "Heavy exudate, infected wounds"
-  ),
-  "foam001": (
-    category: "primary", 
-    name: "Foam",
-    indication: "Moderate-heavy exudate",
-    description: "Highly absorbent, cushioning",
-    frequency: "1-3 days",
-    contraindications: "Dry wounds, eschar"
-  ),
-  "gauze001": (
-    category: "secondary",
-    name: "Gauze",
-    indication: "Secondary dressing",
-    description: "Absorbent, allows air circulation",
+// Example usage with comprehensive wound care data:
+#let comprehensive-dressing-info = (
+  // Ointments and Gels
+  "medihoney-gel": (
+    category: "Ointment/Gel",
+    name: "Medihoney Gel",
+    indication: "Medical-grade honey gel",
+    description: "Promotes debridement and reduction of bioburden. Available on unit carts.",
     frequency: "Daily",
-    contraindications: "Direct contact with wound bed"
+    contraindications: "Honey allergies"
+  ),
+  "hydrogel": (
+    category: "Ointment/Gel", 
+    name: "Hydrogel",
+    indication: "Dry wounds",
+    description: "Adds moisture to dry wounds. Available on unit carts.",
+    frequency: "Daily",
+    contraindications: "Heavy exudate"
+  ),
+  "iodosorb": (
+    category: "Ointment/Gel",
+    name: "Iodosorb",
+    indication: "Cadexomer iodine gel",
+    description: "Absorbs drainage and promotes debridement. Comes from pharmacy.",
+    frequency: "2-3 times weekly",
+    contraindications: "Iodine allergy, thyroid disorders"
+  ),
+  "santyl": (
+    category: "Ointment/Gel",
+    name: "Santyl",
+    indication: "Enzymatic debriding ointment",
+    description: "Enzymatic debridement. Apply in nickel-thick layer. Comes from pharmacy.",
+    frequency: "Daily",
+    contraindications: "Silver-containing products"
+  ),
+  
+  // Wound Fillers and Medicated Dressings
+  "medihoney-alginate": (
+    category: "Filler/Medicated",
+    name: "Medihoney Alginate",
+    indication: "Medical-grade honey alginate",
+    description: "Absorbs drainage and dissolves. Can fill tunnels. Rip or cut to fit. Storeroom (#103872 small, #103873 large).",
+    frequency: "1-3 days",
+    contraindications: "Honey allergies, dry wounds"
+  ),
+  "gelling-fiber": (
+    category: "Filler/Medicated",
+    name: "Gelling Fiber",
+    indication: "Exufiber/Aquacel - Alginate with silver/rope",
+    description: "Absorbs drainage and becomes gel. Ribbon for deep tunnels. Storeroom (Aquacel #112580, Exufiber #201580).",
+    frequency: "1-3 days", 
+    contraindications: "Dry wounds"
+  ),
+  "hydrofera-blue": (
+    category: "Filler/Medicated",
+    name: "Hydrofera Blue",
+    indication: "Methylene Blue/Gentian Violet Foam",
+    description: "Blue foam, absorbs drainage. Plain blue side touches wound. Obtain extra from SWAT.",
+    frequency: "1-3 days",
+    contraindications: "Dry wounds"
+  ),
+  "xeroform": (
+    category: "Filler/Medicated",
+    name: "Xeroform",
+    indication: "Petroleum gauze with Bismuth",
+    description: "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts.",
+    frequency: "Daily",
+    contraindications: "Bismuth sensitivity"
+  ),
+  "prisma-promogran": (
+    category: "Filler/Medicated",
+    name: "Prisma Promogran",
+    indication: "Collagen with Silver",
+    description: "Dissolvable collagen matrix. Rip or cut to fit, premoisten before applying. Storeroom #135917.",
+    frequency: "Weekly",
+    contraindications: "Silver allergies"
+  ),
+  
+  // Cover Dressings
+  "mepilex": (
+    category: "Cover",
+    name: "Mepilex",
+    indication: "Foam-Bordered or Foam-Borderless",
+    description: "Absorbent cover dressing. Variety of sizes. Aggressive adhesive—use caution when removing. Available on unit carts.",
+    frequency: "2-3 days",
+    contraindications: "Fragile skin"
+  ),
+  "tegaderm-absorbent": (
+    category: "Cover",
+    name: "Tegaderm Absorbent",
+    indication: "Transparent Film-Absorbent",
+    description: "For shallow wounds—first-line treatment for skin tears. Can be left in place for 1 week. Gentle adhesive. Available on unit carts/Pyxis.",
+    frequency: "Weekly",
+    contraindications: "Heavy exudate"
+  ),
+  "duoderm": (
+    category: "Cover",
+    name: "DuoDerm",
+    indication: "Hydrocolloid",
+    description: "For shallow wounds with minimal exudate. Also comes in Medihoney version (Medihoney HCS storeroom #147573).",
+    frequency: "3-7 days",
+    contraindications: "Heavy exudate, infection"
+  ),
+  "abd-gauze": (
+    category: "Cover",
+    name: "ABD & Rolled Gauze",
+    indication: "Non-adherent gauze",
+    description: "Best for large areas, limbs, or dressings that require frequent changing. Available on unit carts.",
+    frequency: "Daily",
+    contraindications: "None significant"
   )
 )
 
-#let sample-dressing-ids = (
-  primary: (
-    low: (
-      (id: "hydrocolloid001", primary: true),
-    ),
-    moderate: (
-      (id: "foam001", primary: true),
-    ),
-    heavy: (
-      (id: "foam001", primary: true),
+#let comprehensive-dressing-ids = (
+  ointments: (
+    topical: (
+      (id: "medihoney-gel", primary: true),
+      (id: "hydrogel", primary: true),
+      (id: "iodosorb", primary: true),
+      (id: "santyl", primary: true),
     )
   ),
-  secondary: (
-    standard: (
-      (id: "gauze001", primary: false),
+  fillers: (
+    medicated: (
+      (id: "medihoney-alginate", primary: true),
+      (id: "gelling-fiber", primary: true),
+      (id: "hydrofera-blue", primary: true),
+      (id: "xeroform", primary: true),
+      (id: "prisma-promogran", primary: true),
     )
   ),
-  specialty: (
-    antimicrobial: (
-      (id: "foam001", primary: false),
+  covers: (
+    secondary: (
+      (id: "mepilex", primary: false),
+      (id: "tegaderm-absorbent", primary: false),
+      (id: "duoderm", primary: false),
+      (id: "abd-gauze", primary: false),
     )
   )
 )
 
-// Uncomment to test:
+// Uncomment to test with comprehensive data:
 #wound-care-guide(
-  dressing-info: sample-dressing-info,
-  dressing-ids: sample-dressing-ids,
+  title: "wound care dressing guide",
+  tagline: text[Quick reference for commonly ordered wound care products],
+  dressing-info: comprehensive-dressing-info,
+  dressing-ids: comprehensive-dressing-ids,
   reference-url: "https://example.com/wound-care-protocols"
 )
