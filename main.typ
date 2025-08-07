@@ -106,88 +106,122 @@ show-frequency: false) = {
   show grid.cell: set text(font: "Source Sans Pro", size:11pt)
   show grid.cell: set rect(fill:none, stroke:none, inset:8pt)
 
-  // Simple layout without complex grid
-  smallcaps(text(size:14pt)[Primary Dressings])
-  v(10pt)
+  // Create table with dressing information
+  show table.cell: set text(font: "Source Sans Pro", size: 10pt)
   
-  text(weight: "bold")[Low Exudate]
-  v(5pt)
+  let table-rows = ()
+  
+  // Primary Dressings Header
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#E6F3FF"), stroke: 1pt)[
+      #text(weight: "bold", size: 12pt)[PRIMARY DRESSINGS]
+    ]
+  ))
+  
+  // Table headers
+  table-rows.push((
+    [*Category*], [*Name*], [*Indication*], [*Change Frequency*]
+  ))
+  
+  // Low Exudate Section
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#F0F8FF"), stroke: 0.5pt)[
+      #text(weight: "bold", size: 10pt)[Low Exudate]
+    ]
+  ))
+  
   for item in dressing-ids.primary.low {
-    dressing-details(
-      item.id,
-      dressings: dressing-info, 
-      primary: item.primary, 
-      show-frequency: show-frequency, 
-      footnote: {
-        if "footnote" in item.keys() { item.footnote } else { none }
-      }
-    )
-    v(5pt)
+    let info = dressing-info.at(item.id)
+    table-rows.push((
+      [#info.category], 
+      [#info.name], 
+      [#info.indication], 
+      [#info.frequency]
+    ))
   }
   
-  text(weight: "bold")[Moderate Exudate]
-  v(5pt)
+  // Moderate Exudate Section
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#F0F8FF"), stroke: 0.5pt)[
+      #text(weight: "bold", size: 10pt)[Moderate Exudate]
+    ]
+  ))
+  
   for item in dressing-ids.primary.moderate {
-    dressing-details(
-      item.id,
-      dressings: dressing-info, 
-      primary: item.primary, 
-      show-frequency: show-frequency, 
-      footnote: {
-        if "footnote" in item.keys() { item.footnote } else { none }
-      }
-    )
-    v(5pt)
+    let info = dressing-info.at(item.id)
+    table-rows.push((
+      [#info.category], 
+      [#info.name], 
+      [#info.indication], 
+      [#info.frequency]
+    ))
   }
   
-  text(weight: "bold")[Heavy Exudate]
-  v(5pt)
+  // Heavy Exudate Section
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#F0F8FF"), stroke: 0.5pt)[
+      #text(weight: "bold", size: 10pt)[Heavy Exudate]
+    ]
+  ))
+  
   for item in dressing-ids.primary.heavy {
-    dressing-details(
-      item.id,
-      dressings: dressing-info, 
-      primary: item.primary, 
-      show-frequency: show-frequency, 
-      footnote: {
-        if "footnote" in item.keys() { item.footnote } else { none }
-      }
-    )
-    v(5pt)
+    let info = dressing-info.at(item.id)
+    table-rows.push((
+      [#info.category], 
+      [#info.name], 
+      [#info.indication], 
+      [#info.frequency]
+    ))
   }
   
-  v(15pt)
-  smallcaps(text(size:14pt)[Secondary & Specialty])
-  v(10pt)
+  // Secondary & Specialty Header
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#E6FFE6"), stroke: 1pt)[
+      #text(weight: "bold", size: 12pt)[SECONDARY & SPECIALTY]
+    ]
+  ))
   
-  text(weight: "bold")[Secondary Dressings]
-  v(5pt)
+  // Secondary Section
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#F0FFF0"), stroke: 0.5pt)[
+      #text(weight: "bold", size: 10pt)[Secondary Dressings]
+    ]
+  ))
+  
   for item in dressing-ids.secondary.standard {
-    dressing-details(
-      item.id,
-      dressings: dressing-info, 
-      primary: item.primary, 
-      show-frequency: show-frequency, 
-      footnote: {
-        if "footnote" in item.keys() { item.footnote } else { none }
-      }
-    )
-    v(5pt)
+    let info = dressing-info.at(item.id)
+    table-rows.push((
+      [#info.category], 
+      [#info.name], 
+      [#info.indication], 
+      [#info.frequency]
+    ))
   }
   
-  text(weight: "bold")[Antimicrobial]
-  v(5pt)
+  // Antimicrobial Section
+  table-rows.push((
+    table.cell(colspan: 4, fill: rgb("#F0FFF0"), stroke: 0.5pt)[
+      #text(weight: "bold", size: 10pt)[Antimicrobial]
+    ]
+  ))
+  
   for item in dressing-ids.specialty.antimicrobial {
-    dressing-details(
-      item.id,
-      dressings: dressing-info, 
-      primary: item.primary, 
-      show-frequency: show-frequency, 
-      footnote: {
-        if "footnote" in item.keys() { item.footnote } else { none }
-      }
-    )
-    v(5pt)
+    let info = dressing-info.at(item.id)
+    table-rows.push((
+      [#info.category], 
+      [#info.name], 
+      [#info.indication], 
+      [#info.frequency]
+    ))
   }
+  
+  // Create the table
+  table(
+    columns: (auto, 1fr, 1fr, auto),
+    align: (left, left, left, center),
+    stroke: 0.5pt,
+    ..table-rows.flatten()
+  )
   
   v(10pt)
   text(font: "Source Sans Pro", size:9pt, number-type: "lining")[
