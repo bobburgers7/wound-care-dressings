@@ -120,17 +120,30 @@ show-frequency: false) = {
   
   // Table headers
   table-rows.push((
-    [*Name*], [*Type*], [*Indication & Description*], [*Notes*]
+    [*Image*], [*Name & Type*], [*Description & Instructions*], [*Frequency*]
   ))
   
   // Ointments and Gels
   for item in dressing-ids.ointments.topical {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      [#text(weight: "bold")[#info.name]], 
-      [#info.indication], 
+      // Image placeholder - replace with actual image path
+      if "image" in info.keys() {
+        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+          #align(center + horizon)[
+            #text(size: 8pt, fill: gray)[#info.image]
+          ]
+        ]
+      } else {
+        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+          #align(center + horizon)[
+            #text(size: 8pt, fill: gray)[No Image]
+          ]
+        ]
+      },
+      [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
       [#info.description], 
-      [Change: #info.frequency]
+      [#info.frequency]
     ))
   }
   
@@ -201,7 +214,8 @@ show-frequency: false) = {
     indication: "Medical-grade honey gel",
     description: "Promotes debridement and reduction of bioburden. Available on unit carts.",
     frequency: "Daily",
-    contraindications: "Honey allergies"
+    contraindications: "Honey allergies",
+    image: "medihoney-gel.jpg"
   ),
   "hydrogel": (
     category: "Ointment/Gel", 
@@ -209,7 +223,8 @@ show-frequency: false) = {
     indication: "Dry wounds",
     description: "Adds moisture to dry wounds. Available on unit carts.",
     frequency: "Daily",
-    contraindications: "Heavy exudate"
+    contraindications: "Heavy exudate",
+    image: "hydrogel.jpg"
   ),
   "iodosorb": (
     category: "Ointment/Gel",
@@ -217,7 +232,8 @@ show-frequency: false) = {
     indication: "Cadexomer iodine gel",
     description: "Absorbs drainage and promotes debridement. Comes from pharmacy.",
     frequency: "2-3 times weekly",
-    contraindications: "Iodine allergy, thyroid disorders"
+    contraindications: "Iodine allergy, thyroid disorders",
+    image: "iodosorb.jpg"
   ),
   "santyl": (
     category: "Ointment/Gel",
@@ -225,7 +241,8 @@ show-frequency: false) = {
     indication: "Enzymatic debriding ointment",
     description: "Enzymatic debridement. Apply in nickel-thick layer. Comes from pharmacy.",
     frequency: "Daily",
-    contraindications: "Silver-containing products"
+    contraindications: "Silver-containing products",
+    image: "santyl.jpg"
   ),
   
   // Wound Fillers and Medicated Dressings
@@ -235,7 +252,8 @@ show-frequency: false) = {
     indication: "Medical-grade honey alginate",
     description: "Absorbs drainage and dissolves. Can fill tunnels. Rip or cut to fit. Storeroom (#103872 small, #103873 large).",
     frequency: "1-3 days",
-    contraindications: "Honey allergies, dry wounds"
+    contraindications: "Honey allergies, dry wounds",
+    image: "medihoney-alginate.jpg"
   ),
   "gelling-fiber": (
     category: "Filler/Medicated",
@@ -243,7 +261,8 @@ show-frequency: false) = {
     indication: "Exufiber/Aquacel - Alginate with silver/rope",
     description: "Absorbs drainage and becomes gel. Ribbon for deep tunnels. Storeroom (Aquacel #112580, Exufiber #201580).",
     frequency: "1-3 days", 
-    contraindications: "Dry wounds"
+    contraindications: "Dry wounds",
+    image: "gelling-fiber.jpg"
   ),
   "hydrofera-blue": (
     category: "Filler/Medicated",
@@ -251,7 +270,8 @@ show-frequency: false) = {
     indication: "Methylene Blue/Gentian Violet Foam",
     description: "Blue foam, absorbs drainage. Plain blue side touches wound. Obtain extra from SWAT.",
     frequency: "1-3 days",
-    contraindications: "Dry wounds"
+    contraindications: "Dry wounds",
+    image: "hydrofera-blue.jpg"
   ),
   "xeroform": (
     category: "Filler/Medicated",
@@ -259,7 +279,8 @@ show-frequency: false) = {
     indication: "Petroleum gauze with Bismuth",
     description: "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts.",
     frequency: "Daily",
-    contraindications: "Bismuth sensitivity"
+    contraindications: "Bismuth sensitivity",
+    image: "xeroform.jpg"
   ),
   "prisma-promogran": (
     category: "Filler/Medicated",
@@ -267,7 +288,8 @@ show-frequency: false) = {
     indication: "Collagen with Silver",
     description: "Dissolvable collagen matrix. Rip or cut to fit, premoisten before applying. Storeroom #135917.",
     frequency: "Weekly",
-    contraindications: "Silver allergies"
+    contraindications: "Silver allergies",
+    image: "prisma-promogran.jpg"
   ),
   
   // Cover Dressings
@@ -277,7 +299,8 @@ show-frequency: false) = {
     indication: "Foam-Bordered or Foam-Borderless",
     description: "Absorbent cover dressing. Variety of sizes. Aggressive adhesive—use caution when removing. Available on unit carts.",
     frequency: "2-3 days",
-    contraindications: "Fragile skin"
+    contraindications: "Fragile skin",
+    image: "mepilex.jpg"
   ),
   "tegaderm-absorbent": (
     category: "Cover",
@@ -285,7 +308,8 @@ show-frequency: false) = {
     indication: "Transparent Film-Absorbent",
     description: "For shallow wounds—first-line treatment for skin tears. Can be left in place for 1 week. Gentle adhesive. Available on unit carts/Pyxis.",
     frequency: "Weekly",
-    contraindications: "Heavy exudate"
+    contraindications: "Heavy exudate",
+    image: "tegaderm.jpg"
   ),
   "duoderm": (
     category: "Cover",
@@ -293,7 +317,8 @@ show-frequency: false) = {
     indication: "Hydrocolloid",
     description: "For shallow wounds with minimal exudate. Also comes in Medihoney version (Medihoney HCS storeroom #147573).",
     frequency: "3-7 days",
-    contraindications: "Heavy exudate, infection"
+    contraindications: "Heavy exudate, infection",
+    image: "duoderm.jpg"
   ),
   "abd-gauze": (
     category: "Cover",
@@ -301,7 +326,8 @@ show-frequency: false) = {
     indication: "Non-adherent gauze",
     description: "Best for large areas, limbs, or dressings that require frequent changing. Available on unit carts.",
     frequency: "Daily",
-    contraindications: "None significant"
+    contraindications: "None significant",
+    image: "abd-gauze.jpg"
   )
 )
 
