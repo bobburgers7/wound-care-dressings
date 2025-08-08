@@ -26,11 +26,12 @@
 }
 
 #let product-card(name: "", image-path: none) = {
-  let card-width = 100pt
+  let card-width = 80pt
   let card-height = 80pt
   
   box(width: card-width, height: card-height)[
     #set align(center)
+    #text(font: "Source Sans Pro", size: 8pt, weight: "bold")[#name]
     #if image-path != none {
       load-product-image(image-path, product-name: name)
     } else {
@@ -40,8 +41,6 @@
         ]
       ]
     }
-    #v(1pt)
-    #text(font: "Source Sans Pro", size: 8pt, weight: "bold")[#name]
   ]
 }
 
@@ -119,8 +118,8 @@
       
       v(5pt)
       
-      // Create grid of products (6 columns to fit more on landscape page)
-      let columns = 6
+      // Create grid of products (8 columns to fit more on landscape page)
+      let columns = 8
       let rows = calc.ceil(products.len() / columns)
       
       grid(
