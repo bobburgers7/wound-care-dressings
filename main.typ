@@ -1,5 +1,12 @@
 #import "@preview/codetastic:0.2.2": qrcode
 
+#let load-product-image(image-path, product-name: "") = {
+  // Only show the actual image, no placeholder
+  box(width: 60pt, height: 40pt, stroke: 0.5pt)[
+    #image(image-path, width: 60pt, height: 40pt, fit: "cover")
+  ]
+}
+
 #let smcps = (x) => text(tracking: 0.8pt)[#smallcaps[#lower(x)]]
 
 #let sentence-case(x) = text[#upper(x.at(0))#x.slice(1)]
@@ -131,13 +138,9 @@ show-frequency: false) = {
   for item in dressing-ids.ointments.topical {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      // Image placeholder - replace with actual image path
+      // Load actual image from file - only show image if available
       if "image" in info.keys() {
-        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
-          #align(center + horizon)[
-            #text(size: 8pt, fill: gray)[#info.image]
-          ]
-        ]
+        load-product-image(info.image, product-name: info.name)
       } else {
         box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
           #align(center + horizon)[
@@ -165,12 +168,26 @@ show-frequency: false) = {
     ]
   ))
   
+  // Table headers for fillers
+  table-rows.push((
+    [*Image*], [*Name & Indication*], [*Description*], [*Frequency*]
+  ))
+  
   // Fillers and Medicated Dressings
   for item in dressing-ids.fillers.medicated {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      [#text(weight: "bold")[#info.name]], 
-      [#info.indication], 
+      // Load actual image from file - only show image if available
+      if "image" in info.keys() {
+        load-product-image(info.image, product-name: info.name)
+      } else {
+        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+          #align(center + horizon)[
+            #text(size: 8pt, fill: gray)[No Image]
+          ]
+        ]
+      },
+      [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
       [#info.description], 
       [Change: #info.frequency]
     ))
@@ -183,12 +200,26 @@ show-frequency: false) = {
     ]
   ))
   
+  // Table headers for covers
+  table-rows.push((
+    [*Image*], [*Name & Indication*], [*Description*], [*Frequency*]
+  ))
+  
   // Cover Dressings
   for item in dressing-ids.covers.secondary {
     let info = dressing-info.at(item.id)
     table-rows.push((
-      [#text(weight: "bold")[#info.name]], 
-      [#info.indication], 
+      // Load actual image from file - only show image if available
+      if "image" in info.keys() {
+        load-product-image(info.image, product-name: info.name)
+      } else {
+        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+          #align(center + horizon)[
+            #text(size: 8pt, fill: gray)[No Image]
+          ]
+        ]
+      },
+      [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
       [#info.description], 
       [Change: #info.frequency]
     ))
@@ -197,7 +228,7 @@ show-frequency: false) = {
   // Create the table
   table(
     columns: (auto, 1fr, 1fr, auto),
-    align: (left, left, left, center),
+    align: (center, left, left, center),
     stroke: 0.5pt,
     ..table-rows.flatten()
   )
