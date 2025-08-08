@@ -108,7 +108,19 @@ show-frequency: false) = {
   
   // Set the document's basic properties
   set document(title: title, author: author)
-  set page("a4", flipped: true, margin: (left:1.5cm, rest:1cm))
+  set page(
+    "a4", 
+    flipped: true, 
+    margin: (left:1.5cm, rest:1cm, bottom: 2cm),
+    footer: context [
+      #line(length: 100%, stroke: 0.5pt + gray)
+      #v(3pt)
+      #text(font: "Source Sans Pro", size: 8pt, fill: gray)[
+        Last revised: #date.display("[year]-[month repr:numerical padding:zero]-[day padding:zero]") | Document version 1.0
+        #h(1fr) Page #counter(page).display()
+      ]
+    ]
+  )
   set text(font: "Source Sans Pro", size:16pt, number-type: "lining")
   
   intro(title: smallcaps[#title], tagline: tagline, url: reference-url)
