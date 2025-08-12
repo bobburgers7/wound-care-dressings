@@ -1,0 +1,272 @@
+{
+  "medihoney-gel": {
+    "category": "Ointment/Gel",
+    "name": "Medihoney Gel",
+    "indication": "Medical-grade honey gel",
+    "description": "Promotes debridement and reduction of bioburden. Available on unit carts.",
+    "frequency": "Daily",
+    "contraindications": "Honey allergies",
+    "image": "images/medihoney-gel.jpg"
+  },
+  "hydrogel": {
+    "category": "Ointment/Gel",
+    "name": "Hydrogel",
+    "indication": "Dry wounds",
+    "description": "Adds moisture to dry wounds. Available on unit carts.",
+    "frequency": "Daily",
+    "contraindications": "Heavy exudate",
+    "image": "images/hydrogel.jpg"
+  },
+  "santyl": {
+    "category": "Ointment/Gel",
+    "name": "Santyl",
+    "indication": "Enzymatic debriding ointment",
+    "description": "Enzymatic debridement. Apply in nickel-thick layer. Comes from pharmacy.",
+    "frequency": "Daily",
+    "contraindications": "Silver-containing products",
+    "image": "images/santyl.jpg"
+  },
+  "collagen": {
+    "category": "Ointment/Gel",
+    "name": "Collagen",
+    "indication": "Chronic, non-healing wounds or stalled granulation",
+    "description": "Stimulates ECM and encourages cellular migration to restart wound healing. Do not use in infected wounds.",
+    "frequency": "As directed",
+    "contraindications": "Infected wounds",
+    "image": "images/collagen.jpg"
+  },
+  "silvadene": {
+    "category": "Ointment/Gel", 
+    "name": "Silvadene",
+    "indication": "Superficial and partial-thickness burns, infected wounds",
+    "description": "Topical antimicrobial. Avoid in patients with sulfa allergy. Apply a thin layer once to twice daily.",
+    "frequency": "1-2 times daily",
+    "contraindications": "Sulfa allergy",
+    "image": "images/silvadene.jpg"
+  },
+  "betadine": {
+    "category": "Ointment/Gel",
+    "name": "Iodasorb / Betadine", 
+    "indication": "Short-term infection control",
+    "description": "Broad-spectrum antiseptic. Promotes eschar formation, prevents MASD. Apply sparingly. Can delay healing if used excessively.",
+    "frequency": "As needed",
+    "contraindications": "Iodine allergy, prolonged use",
+    "image": "images/betadine.jpg"
+  },
+  "mupirocin": {
+    "category": "Ointment/Gel",
+    "name": "Mupirocin",
+    "indication": "Localized bacterial skin infections", 
+    "description": "Topical antibiotic effective against gram-positive bacteria.",
+    "frequency": "2-3 times daily",
+    "contraindications": "Known hypersensitivity",
+    "image": "images/mupirocin.jpg"
+  },
+  "zinc-oxide": {
+    "category": "Ointment/Gel",
+    "name": "Zinc Oxide",
+    "indication": "Periwound protection, moisture barrier",
+    "description": "Protective barrier cream for moisture-prone areas.",
+    "frequency": "As needed",
+    "contraindications": "None significant",
+    "image": "images/zinc-oxide.jpg"
+  },
+  "ad-ointment": {
+    "category": "Ointment/Gel",
+    "name": "A&D Ointment",
+    "indication": "Minor skin irritation, early skin breakdown",
+    "description": "Vitamin-enriched ointment for minor skin protection.",
+    "frequency": "As needed",
+    "contraindications": "None significant", 
+    "image": "images/ad-ointment.jpg"
+  },
+  "desitin": {
+    "category": "Ointment/Gel",
+    "name": "Desitin",
+    "indication": "Skin barrier for moisture-prone areas",
+    "description": "Zinc oxide-based barrier cream for diaper rash and moisture protection.",
+    "frequency": "As needed",
+    "contraindications": "None significant",
+    "image": "images/zinc-oxide.jpg"
+  },
+  "aquaphor": {
+    "category": "Ointment/Gel",
+    "name": "Aquaphor",
+    "indication": "Dry skin, friction areas, minor wounds", 
+    "description": "Occlusive healing ointment for dry and damaged skin.",
+    "frequency": "As needed",
+    "contraindications": "None significant",
+    "image": "images/aquaphor.jpg"
+  },
+  "vaseline": {
+    "category": "Ointment/Gel",
+    "name": "Vaseline",
+    "indication": "Occlusive moisture barrier",
+    "description": "Pure petroleum jelly for occlusive moisture barrier.",
+    "frequency": "As needed", 
+    "contraindications": "None significant",
+    "image": "images/vaseline.jpg"
+  },
+  "medihoney-alginate": {
+    "category": "Filler/Medicated",
+    "name": "Medihoney Alginate",
+    "indication": "Medical-grade honey alginate",
+    "description": "Absorbs drainage and dissolves. Can fill tunnels. Rip or cut to fit. Storeroom (#103872 small, #103873 large).",
+    "frequency": "1-3 days",
+    "contraindications": "Honey allergies, dry wounds",
+    "image": "images/medihoney-alginate.jpg"
+  },
+  "gelling-fiber": {
+    "category": "Filler/Medicated",
+    "name": "Gelling Fiber",
+    "indication": "Exufiber/Aquacel - Alginate with silver/rope",
+    "description": "Absorbs drainage and becomes gel. Ribbon for deep tunnels. Storeroom (Aquacel #112580, Exufiber #201580).",
+    "frequency": "1-3 days", 
+    "contraindications": "Dry wounds",
+    "image": "images/gelling-fiber.jpg"
+  },
+  "xeroform": {
+    "category": "Filler/Medicated",
+    "name": "Xeroform",
+    "indication": "Petroleum gauze with Bismuth",
+    "description": "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts.",
+    "frequency": "Daily",
+    "contraindications": "Bismuth sensitivity",
+    "image": "images/xeroform.jpg"
+  },
+  "prisma-promogran": {
+    "category": "Filler/Medicated",
+    "name": "Prisma Promogran",
+    "indication": "Collagen with Silver",
+    "description": "Dissolvable collagen matrix. Rip or cut to fit, premoisten before applying. Storeroom #135917.",
+    "frequency": "Weekly",
+    "contraindications": "Silver allergies",
+    "image": "images/prisma-promogran.jpg"
+  },
+  "silvasorb": {
+    "category": "Filler/Medicated",
+    "name": "Silvasorb",
+    "indication": "Dry or desiccated wounds, superficial burns",
+    "description": "Silver-impregnated gauze. Maintains moist wound bed, promotes autolytic debridement. Avoid in infected wounds.",
+    "frequency": "1-3 days",
+    "contraindications": "Silver allergy, infected wounds",
+    "image": "images/silvasorb.jpg"
+  },
+  "alginates-silver": {
+    "category": "Filler/Medicated",
+    "name": "Alginates/Silver & Calcium/Supersorb",
+    "indication": "Heavily draining ulcers/wounds",
+    "description": "Silver AG is antimicrobial. Helps with draining/bleeding wounds. Comes in sheets, strips, fluff, and rope.",
+    "frequency": "1-3 days",
+    "contraindications": "Dry wounds, silver allergy",
+    "image": "images/alginates-silver.jpg"
+  },
+  "aquacel-ag": {
+    "category": "Filler/Medicated", 
+    "name": "Aquacel Ag/Opticel",
+    "indication": "Heavily exudative or bleeding wounds",
+    "description": "Converts exudate into gel, promoting moist healing. Requires secondary dressing. Not ideal for dry wounds.",
+    "frequency": "1-3 days",
+    "contraindications": "Dry wounds, silver allergy",
+    "image": "images/aquacel-ag.jpg"
+  },
+  "mepilex": {
+    "category": "Cover",
+    "name": "Allevyn",
+    "indication": "Foam-Bordered or Foam-Borderless",
+    "description": "Absorbent cover dressing. Variety of sizes. Aggressive adhesive—use caution when removing. Available on unit carts.",
+    "frequency": "2-3 days",
+    "contraindications": "Fragile skin",
+    "image": "images/allevyn.png"
+  },
+  "tegaderm-absorbent": {
+    "category": "Cover",
+    "name": "Tegaderm Absorbent",
+    "indication": "Transparent Film-Absorbent",
+    "description": "For shallow wounds—first-line treatment for skin tears. Can be left in place for 1 week. Gentle adhesive. Available on unit carts/Pyxis.",
+    "frequency": "Weekly",
+    "contraindications": "Heavy exudate",
+    "image": "images/tegaderm-absorbent.jpg"
+  },
+  "duoderm": {
+    "category": "Cover",
+    "name": "DuoDerm",
+    "indication": "Hydrocolloid",
+    "description": "For shallow wounds with minimal exudate. Also comes in Medihoney version (Medihoney HCS storeroom #147573).",
+    "frequency": "3-7 days",
+    "contraindications": "Heavy exudate, infection",
+    "image": "images/duoderm.jpg"
+  },
+  "abd-gauze": {
+    "category": "Cover",
+    "name": "ABD & Rolled Gauze",
+    "indication": "Non-adherent gauze",
+    "description": "Best for large areas, limbs, or dressings that require frequent changing. Available on unit carts.",
+    "frequency": "Daily",
+    "contraindications": "None significant",
+    "image": "images/abd-gauze.jpg"
+  },
+  "telfa-pads": {
+    "category": "Cover",
+    "name": "Telfa Pads",
+    "indication": "Moist, superficial wounds", 
+    "description": "Nonstick surface for moist, superficial wounds. Often paired with secondary gauze wrap.",
+    "frequency": "Daily",
+    "contraindications": "None significant",
+    "image": "images/telfa-pads.jpg"
+  },
+  "coban-ace": {
+    "category": "Cover",
+    "name": "Coban/ACE",
+    "indication": "Compression therapy, wound support",
+    "description": "Apply with caution; can impair circulation if wrapped too tightly. Use for edema or venous ulcers.",
+    "frequency": "As directed",
+    "contraindications": "Arterial insufficiency",
+    "image": "images/coban.png"
+  },
+  "netting-stockinette": {
+    "category": "Cover", 
+    "name": "Netting/Stockinette",
+    "indication": "Dressings on limbs or mobile areas",
+    "description": "Elastic material that allows easy visual inspection of the wound while holding dressing in place.",
+    "frequency": "As needed",
+    "contraindications": "None significant",
+    "image": "images/netting-stockinette.jpg"
+  },
+  "tegaderm-film": {
+    "category": "Cover",
+    "name": "Tegaderm Film",
+    "indication": "Minor wounds, donor sites, abrasions",
+    "description": "Transparent film, protects shallow wounds.",
+    "frequency": "3-7 days",
+    "contraindications": "Heavy exudate",
+    "image": "images/tegaderm.png"
+  },
+  "foam-silicone": {
+    "category": "Cover",
+    "name": "Foam/Silicone Bordered",
+    "indication": "Moderate drainage wounds",
+    "description": "Cushions & absorbs moderate drainage, water resistant outside.",
+    "frequency": "2-3 days",
+    "contraindications": "Heavy exudate",
+    "image": "images/foam-silicone.png"
+  },
+  "island-dressing": {
+    "category": "Cover",
+    "name": "Bordered Gauze/Island Dressing",
+    "indication": "General wound coverage",
+    "description": "An adhesive edge with a nonadherent center to help hold the primary dressing in place and keep medications on.",
+    "frequency": "1-3 days",
+    "contraindications": "Fragile skin",
+    "image": "images/bordered-gauze.png"
+  },
+  "super-absorbent": {
+    "category": "Cover",
+    "name": "Super Absorbent Dressing",
+    "indication": "Heavily draining wounds",
+    "description": "Absorbs excess amounts of drainage/blood.",
+    "frequency": "1-2 days",
+    "contraindications": "Dry wounds",
+    "image": "images/super-absorbent.jpg"
+  }
+}
