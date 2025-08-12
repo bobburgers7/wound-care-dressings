@@ -8,7 +8,6 @@
 }
 
 #let smcps = (x) => text(tracking: 0.8pt)[#smallcaps[#lower(x)]]
-
 #let sentence-case(x) = text[#upper(x.at(0))#x.slice(1)]
 #let darkgrey = rgb(29, 27, 28)
 #let medical-red = rgb("#8B0000") 
@@ -35,109 +34,17 @@
   )
 }
 
-#let wound-type(body) = {
-  box[
-    #set text(font: "Source Sans Pro", size:12pt)
-    #rect(fill:rgb("#DDDD").transparentize(60%),width:100%, height: 2cm)[#body]
-  ]
-}
-
-#let dressing(
-  category: "primary", 
-  name: "hydrocolloid", 
-  indication: "moderate exudate",
-  fill: rgb("#E6F3FF"),
-  description: text[absorptive, waterproof backing]
-) = box[
-  #set text(font: "Source Sans Pro", size:12pt)
-  #rect(fill:fill,width:5.5cm, height: 2cm)[
-    #smallcaps[#text(size:14pt)[#category]] | #text[#name]\ 
-    #text(size:10pt, style: "italic")[#indication]\ 
-    #description
-  ]
-]
-
-#show grid.cell: set text(font: "Source Sans Pro", size:11pt)
-#show grid.cell: set rect(fill:none,stroke:none, inset:8pt)
-
-#let dressing-details(dressing-id, dressings: none, primary: true, footnote: none,
-show-frequency: false) = {
-  let info = dressings.at(dressing-id)
-  let category = info.category
-  let name = info.name
-  let indication = info.indication
-  let description = info.description
-  let frequency = info.frequency
-  let contraindications = if "contraindications" in info.keys() { info.contraindications } else { none }
-  
-  let fill = if primary {(
-    "primary": rgb(176, 224, 230),      // Light blue
-    "secondary": rgb(152, 251, 152),    // Light green  
-    "antimicrobial": rgb(255, 182, 193), // Light pink
-    "specialty": rgb(255, 218, 185),    // Light orange
-  ).at(category)} else {rgb("#AAAA")}
-
-  let stroke = if primary { 1pt + fill} else {1pt + color.mix((rgb("#AAAA"), 15%), (white, 85%)) }
-  
-  box[
-    #set text(font: "Source Sans Pro", size:12pt)
-    #rect(fill:color.mix((fill, 15%), (white, 85%)), stroke: stroke,
-    width:100%, height: 2cm)[
-      #smallcaps[#text(size:14pt)[#category#h(1pt)*#name*]] 
-      #if show-frequency [#h(1fr) #text[Change: #frequency]] else {}  
-      #h(1fr)| #text[#indication]\ 
-      #description 
-      #if footnote != none {text(size:9pt)[#eval(footnote, mode: "markup")]} else {}
-    ]
-  ]
-}
-
-#let wound-care-guide(
-  title: "wound dressing selection guide",
-  author: "Medical Team",
-  tagline: text[Quick reference for wound assessment and dressing selection],
-  reference-url: "", 
-  data-file: "wound-care-data.json",
-  show-frequency: true,
-  date: datetime(year: 2024, month: 12, day: 1),
+#let create-section-table(
+  section-config, 
+  products-data, 
+  show-frequency: false
 ) = {
-  // Load data from JSON file
-  let wound-data = json(data-file)
-  let dressing-info = wound-data.dressing-info
-  let dressing-ids = wound-data.dressing-ids
-  
-  // Set the document's basic properties
-  set document(title: title, author: author)
-  set page(
-    "a4", 
-    flipped: true, 
-    margin: (left:1.5cm, rest:1cm, bottom: 2cm),
-    footer: context [
-      #line(length: 100%, stroke: 0.5pt + gray)
-      #v(3pt)
-      #text(font: "Source Sans Pro", size: 8pt, fill: gray)[
-        Last revised: #date.display("[year]-[month repr:numerical padding:zero]-[day padding:zero]") | Document version 1.0
-        #h(1fr) Page #counter(page).display()
-      ]
-    ]
-  )
-  set text(font: "Source Sans Pro", size:16pt, number-type: "lining")
-  
-  intro(title: smallcaps[#title], tagline: tagline, url: reference-url)
-  v(5pt, weak: true)
-  
-  show grid.cell: set text(font: "Source Sans Pro", size:11pt)
-  show grid.cell: set rect(fill:none, stroke:none, inset:8pt)
-
-  // Create table with dressing information
-  show table.cell: set text(font: "Source Sans Pro", size: 10pt)
-  
   let table-rows = ()
   
-  // Primary Dressings Header
+  // Section Header
   table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#E6F3FF"), stroke: 1pt)[
-      #text(weight: "bold", size: 12pt)[COMMONLY ORDERED OINTMENTS AND GELS]
+    table.cell(colspan: 4, fill: rgb(section-config.at("header-color", default: "#FFFFFF")), stroke: 1pt)[
+      #text(weight: "bold", size: 12pt)[#section-config.title]
     ]
   ))
   
@@ -146,116 +53,186 @@ show-frequency: false) = {
     [*Image*], [*Name & Type*], [*Description & Instructions*], [*Frequency*]
   ))
   
-  // Ointments and Gels
-  for item in dressing-ids.ointments.topical {
-    let info = dressing-info.at(item.id)
-    table-rows.push((
-      // Load actual image from file - only show image if available
-      if "image" in info.keys() {
-        load-product-image(info.image, product-name: info.name)
-      } else {
-        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
-          #align(center + horizon)[
-            #text(size: 8pt, fill: gray)[No Image]
+  // Add products
+  for product-id in section-config.products {
+    if product-id in products-data {
+      let info = products-data.at(product-id)
+      table-rows.push((
+        // Load actual image from file - only show image if available
+        if "image" in info.keys() {
+          load-product-image(info.image, product-name: info.name)
+        } else {
+          box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+            #align(center + horizon)[
+              #text(size: 8pt, fill: gray)[No Image]
+            ]
           ]
-        ]
-      },
-      [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
-      [#info.description], 
-      [#info.frequency]
+        },
+        [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
+        [#info.description], 
+        if show-frequency [Change: #info.frequency] else [#info.frequency]
+      ))
+    }
+  }
+  
+  // Add section note if present
+  if "note" in section-config.keys() {
+    let note-color = if "note-color" in section-config.keys() { 
+      rgb(section-config.at("note-color")) 
+    } else { 
+      rgb("#FFFACD") 
+    }
+    table-rows.push((
+      table.cell(colspan: 4, fill: note-color, stroke: 0.5pt)[
+        #text(size: 9pt, style: "italic")[#section-config.note]
+      ]
     ))
   }
   
-  // Note about oil emulsion gauze
-  table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#FFFACD"), stroke: 0.5pt)[
-      #text(size: 9pt, style: "italic")[Each of these can be spread over a piece of oil emulsion gauze first, then applied to the wound, to ensure coverage of the wound bed.]
-    ]
-  ))
-  
-  // Wound Fillers Header
-  table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#E6FFE6"), stroke: 1pt)[
-      #text(weight: "bold", size: 12pt)[COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS]
-    ]
-  ))
-  
-  // Table headers for fillers
-  table-rows.push((
-    [*Image*], [*Name & Indication*], [*Description*], [*Frequency*]
-  ))
-  
-  // Fillers and Medicated Dressings
-  for item in dressing-ids.fillers.medicated {
-    let info = dressing-info.at(item.id)
-    table-rows.push((
-      // Load actual image from file - only show image if available
-      if "image" in info.keys() {
-        load-product-image(info.image, product-name: info.name)
-      } else {
-        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
-          #align(center + horizon)[
-            #text(size: 8pt, fill: gray)[No Image]
-          ]
-        ]
-      },
-      [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
-      [#info.description], 
-      [Change: #info.frequency]
-    ))
+  return table-rows
+}
+
+#let create-catalog-review-section(
+  catalog-config,
+  products-data,
+  show-frequency: false
+) = {
+  if not catalog-config.enabled {
+    return []
   }
   
-  // Cover Dressings Header
-  table-rows.push((
-    table.cell(colspan: 4, fill: rgb("#FFE6E6"), stroke: 1pt)[
-      #text(weight: "bold", size: 12pt)[COMMONLY ORDERED COVER DRESSINGS]
+  let all-rows = ()
+  
+  // Main catalog header
+  all-rows.push((
+    table.cell(colspan: 4, fill: rgb(catalog-config.at("header-color", default: "#FFFFFF")), stroke: 1pt)[
+      #text(weight: "bold", size: 12pt)[#catalog-config.title]
     ]
   ))
   
-  // Table headers for covers
-  table-rows.push((
-    [*Image*], [*Name & Indication*], [*Description*], [*Frequency*]
-  ))
-  
-  // Cover Dressings
-  for item in dressing-ids.covers.secondary {
-    let info = dressing-info.at(item.id)
-    table-rows.push((
-      // Load actual image from file - only show image if available
-      if "image" in info.keys() {
-        load-product-image(info.image, product-name: info.name)
-      } else {
-        box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
-          #align(center + horizon)[
-            #text(size: 8pt, fill: gray)[No Image]
-          ]
-        ]
-      },
-      [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
-      [#info.description], 
-      [Change: #info.frequency]
+  // Add each category
+  for (category-key, category-config) in catalog-config.at("categories", default: (:)) {
+    // Category subheader
+    all-rows.push((
+      table.cell(colspan: 4, fill: rgb("#F8F8F8"), stroke: 0.5pt)[
+        #text(weight: "bold", size: 11pt)[#category-config.title]
+      ]
     ))
+    
+    // Category products
+    for product-id in category-config.products {
+      if product-id in products-data {
+        let info = products-data.at(product-id)
+        all-rows.push((
+          // Image
+          if "image" in info.keys() {
+            load-product-image(info.image, product-name: info.name)
+          } else {
+            box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+              #align(center + horizon)[
+                #text(size: 8pt, fill: gray)[No Image]
+              ]
+            ]
+          },
+          [#text(weight: "bold")[#info.name] \ #text(size: 9pt, style: "italic")[#info.indication]], 
+          [#info.description], 
+          if show-frequency [Change: #info.frequency] else [#info.frequency]
+        ))
+      }
+    }
   }
   
-  // Create the table
+  return all-rows
+}
+
+#let wound-care-guide(
+  config-file: "wound-care-config.yaml",
+  data-file: "wound-care-data.json"
+) = {
+  // Load configuration and data
+  let config = yaml(config-file)
+  let products-data = json(data-file)
+  
+  // Set the document's basic properties
+  set document(
+    title: config.document.title, 
+    author: config.document.author
+  )
+  
+  set page(
+    "a4", 
+    flipped: true, 
+    margin: (left:1.5cm, rest:1cm, bottom: 2cm),
+    footer: context [
+      #line(length: 100%, stroke: 0.5pt + gray)
+      #v(3pt)
+      #text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size: 8pt, fill: gray)[
+        #if config.footer.show_date [
+          Last revised: #datetime(
+            year: config.document.date.year, 
+            month: config.document.date.month, 
+            day: config.document.date.day
+          ).display("[year]-[month repr:numerical padding:zero]-[day padding:zero]")
+        ]
+        #if config.footer.show_version [ | Document version #config.footer.version]
+        #h(1fr) Page #counter(page).display()
+      ]
+    ]
+  )
+  
+  set text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size:16pt, number-type: "lining")
+  
+  // Document header
+  intro(
+    title: smallcaps[#config.document.title], 
+    tagline: config.document.tagline, 
+    url: config.document.at("reference-url", default: "")
+  )
+  v(5pt, weak: true)
+  
+  show grid.cell: set text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size:11pt)
+  show grid.cell: set rect(fill:none, stroke:none, inset:8pt)
+  show table.cell: set text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size: 10pt)
+  
+  // Create main sections
+  let all-table-rows = ()
+  
+  for (section-key, section-config) in config.sections {
+    let section-rows = create-section-table(
+      section-config, 
+      products-data, 
+      show-frequency: config.document.at("show-frequency", default: false)
+    )
+    all-table-rows = all-table-rows + section-rows
+  }
+  
+  // Add catalog review section if enabled
+  if config.at("catalog-review", default: (enabled: false)).enabled {
+    let catalog-rows = create-catalog-review-section(
+      config.at("catalog-review", default: (enabled: false)),
+      products-data,
+      show-frequency: config.document.at("show-frequency", default: false)
+    )
+    all-table-rows = all-table-rows + catalog-rows
+  }
+  
+  // Create the main table
   table(
     columns: (auto, 1fr, 1fr, auto),
     align: (center, left, left, center),
     stroke: 0.5pt,
-    ..table-rows.flatten()
+    ..all-table-rows.flatten()
   )
   
   v(10pt)
-  text(font: "Source Sans Pro", size:9pt, number-type: "lining")[
+  text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size:9pt, number-type: "lining")[
     *Important:* Always assess wound bed, surrounding skin, and patient factors before selecting dressing. 
-    For detailed protocols visit: #reference-url
+    For detailed protocols visit: #config.document.at("reference-url", default: "")
   ]
 }
 
-// Example usage - now loads data from JSON file
+// Example usage with the new split file system
 #wound-care-guide(
-  title: "wound care dressing guide",
-  tagline: text[Quick reference for commonly ordered wound care products],
-  data-file: "wound-care-data.json",
-  reference-url: "https://example.com/wound-care-protocols"
+  config-file: "wound-care-config.yaml",
+  data-file: "wound-care-data.json"
 )

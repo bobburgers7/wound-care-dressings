@@ -1,0 +1,205 @@
+# Wound Care Guide Configuration
+# This file controls what appears in the guide and how it's formatted
+
+# Document metadata
+document:
+  title: "Jovive Walnut Creek - wound care dressing guide"
+  tagline: "Quick reference for wound care products available in clinic"
+  author: "Medical Team"
+  reference-url: "https://example.com/wound-care-protocols"
+  show-frequency: true
+  date:
+    year: 2024
+    month: 12
+    day: 1
+
+# Main sections configuration - these appear in the primary guide
+sections:
+  ointments:
+    title: "COMMONLY ORDERED OINTMENTS AND GELS"
+    header-color: "#E6F3FF"
+    note: "Each of these can be spread over a piece of oil emulsion gauze first, then applied to the wound, to ensure coverage of the wound bed."
+    note_color: "#FFFACD"
+    products:
+      - "medihoney-gel"
+      - "hydrogel" 
+      - "iodosorb"
+      - "santyl"
+      - "collagen"
+      - "silvadene"
+      - "betadine"
+      - "triad-cream"
+      - "mupirocin"
+      - "gentamicin"
+      - "zinc-oxide"
+      - "calmoseptine"
+      - "ad-ointment"
+      - "desitin"
+      - "aquaphor"
+      - "vaseline"
+
+  fillers:
+    title: "COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS"
+    header-color: "#E6FFE6"
+    products:
+      - "medihoney-alginate"
+      - "gelling-fiber"
+      - "hydrofera-blue"
+      - "xeroform"
+      - "prisma-promogran"
+      - "silvasorb"
+      - "alginates-silver"
+      - "aquacel-ag"
+      - "adaptic"
+
+  covers:
+    title: "COMMONLY ORDERED COVER DRESSINGS"
+    header-color: "#FFE6E6"
+    products:
+      - "mepilex"
+      - "tegaderm-absorbent"
+      - "duoderm"
+      - "abd-gauze"
+      - "telfa-pads"
+      - "abd-pads"
+      - "kerlix-wrap"
+      - "coban-ace"
+      - "netting-stockinette"
+      - "tegaderm-film"
+      - "foam-silicone"
+      - "island-dressing"
+      - "super-absorbent"
+
+# Catalog review section - toggle this on/off as needed
+catalog-review:
+  enabled: true  # Set to true to show catalog items in the guide
+  title: "CATALOG ITEMS FOR REVIEW"
+  header-color: "#F0F0F0"
+  
+  # Organize catalog items by category for easier review
+  categories:
+    compression:
+      title: "Compression Systems"
+      products:
+        - "compression-k2-dual"
+        - "compression-k2-lite"
+        - "spandagrip-e"
+        - "spandagrip-f"
+        - "spandagrip-g"
+        - "unna-boot"
+
+    medications:
+      title: "Additional Medications"
+      products:
+        - "lidocaine-ointment"
+        - "hydrocortisone-cream"
+        - "triamcinolone-cream"
+        - "nystatin-powder"
+        - "antifungal-cream"
+        - "calmoseptine-catalog"
+
+    advanced_dressings:
+      title: "Advanced/Specialty Dressings"
+      products:
+        - "fibracol-collagen"
+        - "hydrofera-blue-ready"
+        - "calcium-alginate-plain"
+        - "calcium-alginate-ag"
+        - "gelling-fiber-ag-rope"
+        - "hydrocellular-foam"
+        - "hydrocolloid-thin"
+        - "xtrasorb-dressing"
+
+    foam_silicone:
+      title: "Additional Foam/Silicone Options"
+      products:
+        - "allevy-lite-4x4"
+        - "allevy-lite-larger"
+        - "silicone-foam-6x6"
+        - "silicone-foam-3x3"
+
+    tapes_securing:
+      title: "Tapes & Securing Materials"
+      products:
+        - "paper-tape"
+        - "hypafix-tape"
+        - "retention-tape-2in"
+        - "cohesive-bandage-tan"
+        - "conform-bandage"
+
+    wound_care_supplies:
+      title: "Additional Wound Care Supplies"
+      products:
+        - "catalog-hydrogel"
+        - "saline-irrigation"
+        - "wound-cleanser-spray"
+        - "vashe-wound-wash"
+        - "island-border-gauze"
+
+    instruments_tools:
+      title: "Instruments & Tools"
+      products:
+        - "silver-nitrate"
+        - "biopsy-punch"
+        - "dermal-curette-2mm"
+        - "dermal-curette-4mm"
+        - "surgical-blade-15"
+        - "staple-remover"
+        - "suture-removal-tray"
+        - "wound-measuring-ruler"
+
+    prep_cleaning:
+      title: "Prep & Cleaning Supplies"
+      products:
+        - "adhesive-remover"
+        - "alcohol-prep"
+        - "povidone-prep"
+        - "benzoin-tincture"
+        - "skin-prep-wipes"
+        - "sanicloth-wipes"
+
+    basic_supplies:
+      title: "Basic Supplies"
+      products:
+        - "gauze-sponge-2x2"
+        - "gauze-sponge-4x4"
+        - "cotton-tip-applicators"
+        - "tongue-depressor"
+        - "skin-closure-strips"
+        - "tubular-net-sz6"
+        - "tubular-net-sz9"
+
+    specialty_items:
+      title: "Specialty Items"
+      products:
+        - "nasal-packing-iodoform"
+        - "nasal-packing-plain"
+        - "ostomy-ring"
+        - "saline-inhalation"
+
+    general_supplies:
+      title: "General Supplies"
+      products:
+        - "underpad-absorbent"
+        - "pillowcase-disposable"
+        - "pillow-microvent"
+        - "procedure-mask"
+        - "procedure-towel"
+        - "drape-sheet"
+
+# Table formatting options
+table:
+  columns:
+    image_width: "60pt"
+    image_height: "40pt" 
+    name_weight: "bold"
+    description_size: "10pt"
+    indication_style: "italic"
+    indication_size: "9pt"
+
+# Footer settings
+footer:
+  show_version: true
+  version: "0.1"
+  show_date: true
+  font_size: "8pt"
