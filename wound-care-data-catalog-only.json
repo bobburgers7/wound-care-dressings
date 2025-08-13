@@ -35,6 +35,24 @@
     "contraindications": "None significant",
     "image": "images/calmoseptine.jpg"
   },
+  "medihoney-gel": {
+    "category": "Ointment/Gel",
+    "name": "Medihoney Gel",
+    "indication": "Medical-grade honey gel",
+    "description": "Promotes debridement and reduction of bioburden. Available on unit carts.",
+    "frequency": "Daily",
+    "contraindications": "Honey allergies",
+    "image": "images/medihoney-gel.jpg"
+  },
+  "xeroform": {
+    "category": "Filler/Medicated",
+    "name": "Xeroform",
+    "indication": "Petroleum gauze with Bismuth",
+    "description": "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts.",
+    "frequency": "Daily",
+    "contraindications": "Bismuth sensitivity",
+    "image": "images/xeroform.jpg"
+  },
   "hydrofera-blue": {
     "category": "Filler/Medicated",
     "name": "Hydrofera Blue",
@@ -78,7 +96,7 @@
     "description": "Two-layer compression system for venous insufficiency and edema management.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency, infection",
-    "image": "images/compression-k2.png"
+    "image": "images/compression-k2.jpg"
   },
   "compression-k2-lite": {
     "category": "Catalog-Review",

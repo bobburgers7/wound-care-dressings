@@ -1,13 +1,4 @@
 {
-  "medihoney-gel": {
-    "category": "Ointment/Gel",
-    "name": "Medihoney Gel",
-    "indication": "Medical-grade honey gel",
-    "description": "Promotes debridement and reduction of bioburden. Available on unit carts.",
-    "frequency": "Daily",
-    "contraindications": "Honey allergies",
-    "image": "images/medihoney-gel.jpg"
-  },
   "hydrogel": {
     "category": "Ointment/Gel",
     "name": "Hydrogel",
@@ -124,15 +115,6 @@
     "frequency": "1-3 days", 
     "contraindications": "Dry wounds",
     "image": "images/gelling-fiber.jpg"
-  },
-  "xeroform": {
-    "category": "Filler/Medicated",
-    "name": "Xeroform",
-    "indication": "Petroleum gauze with Bismuth",
-    "description": "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts.",
-    "frequency": "Daily",
-    "contraindications": "Bismuth sensitivity",
-    "image": "images/xeroform.jpg"
   },
   "prisma-promogran": {
     "category": "Filler/Medicated",

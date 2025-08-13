@@ -9,9 +9,9 @@ document:
   reference-url: "https://example.com/wound-care-protocols"
   show-frequency: true
   date:
-    year: 2024
-    month: 12
-    day: 1
+    year: 2025
+    month: 8
+    day: 12
 
 # Main sections configuration - these appear in the primary guide
 sections:
@@ -113,8 +113,8 @@ catalog-review:
     foam_silicone:
       title: "Additional Foam/Silicone Options"
       products:
-        - "allevy-lite-4x4"
-        - "allevy-lite-larger"
+        - "allevy-life-4x4"
+        - "allevy-life-larger"
         - "silicone-foam-6x6"
         - "silicone-foam-3x3"
 
@@ -181,9 +181,6 @@ catalog-review:
       title: "General Supplies"
       products:
         - "underpad-absorbent"
-        - "pillowcase-disposable"
-        - "pillow-microvent"
-        - "procedure-mask"
         - "procedure-towel"
         - "drape-sheet"
 
