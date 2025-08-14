@@ -1,22 +1,4 @@
 {
-  "medihoney-gel": {
-    "category": "Ointment/Gel",
-    "name": "Medihoney Gel",
-    "indication": "Medical-grade honey gel",
-    "description": "Promotes debridement and reduction of bioburden. Available on unit carts.",
-    "frequency": "Daily",
-    "contraindications": "Honey allergies",
-    "image": "images/medihoney-gel.jpg"
-  },
-  "hydrogel": {
-    "category": "Ointment/Gel",
-    "name": "Hydrogel",
-    "indication": "Dry wounds",
-    "description": "Adds moisture to dry wounds. Available on unit carts.",
-    "frequency": "Daily",
-    "contraindications": "Heavy exudate",
-    "image": "images/hydrogel.jpg"
-  },
   "iodosorb": {
     "category": "Ointment/Gel",
     "name": "Iodosorb",
@@ -24,43 +6,7 @@
     "description": "Absorbs drainage and promotes debridement. Comes from pharmacy.",
     "frequency": "2-3 times weekly",
     "contraindications": "Iodine allergy, thyroid disorders",
-    "image": "images/iodosorb.jpg"
-  },
-  "santyl": {
-    "category": "Ointment/Gel",
-    "name": "Santyl",
-    "indication": "Enzymatic debriding ointment",
-    "description": "Enzymatic debridement. Apply in nickel-thick layer. Comes from pharmacy.",
-    "frequency": "Daily",
-    "contraindications": "Silver-containing products",
-    "image": "images/santyl.jpg"
-  },
-  "collagen": {
-    "category": "Ointment/Gel",
-    "name": "Collagen",
-    "indication": "Chronic, non-healing wounds or stalled granulation",
-    "description": "Stimulates ECM and encourages cellular migration to restart wound healing. Do not use in infected wounds.",
-    "frequency": "As directed",
-    "contraindications": "Infected wounds",
-    "image": "images/collagen.jpg"
-  },
-  "silvadene": {
-    "category": "Ointment/Gel", 
-    "name": "Silvadene",
-    "indication": "Superficial and partial-thickness burns, infected wounds",
-    "description": "Topical antimicrobial. Avoid in patients with sulfa allergy. Apply a thin layer once to twice daily.",
-    "frequency": "1-2 times daily",
-    "contraindications": "Sulfa allergy",
-    "image": "images/silvadene.jpg"
-  },
-  "betadine": {
-    "category": "Ointment/Gel",
-    "name": "Iodasorb / Betadine", 
-    "indication": "Short-term infection control",
-    "description": "Broad-spectrum antiseptic. Promotes eschar formation, prevents MASD. Apply sparingly. Can delay healing if used excessively.",
-    "frequency": "As needed",
-    "contraindications": "Iodine allergy, prolonged use",
-    "image": "images/betadine.jpg"
+    "image": "images-optimized/iodosorb.jpg"
   },
   "triad-cream": {
     "category": "Ointment/Gel",
@@ -69,16 +15,7 @@
     "description": "Protects periwound and intact skin from moisture damage. Ideal for sacral breakdown. Reapply after each soiling.",
     "frequency": "After each soiling",
     "contraindications": "None significant",
-    "image": "images/triad-cream.png"
-  },
-  "mupirocin": {
-    "category": "Ointment/Gel",
-    "name": "Mupirocin",
-    "indication": "Localized bacterial skin infections", 
-    "description": "Topical antibiotic effective against gram-positive bacteria.",
-    "frequency": "2-3 times daily",
-    "contraindications": "Known hypersensitivity",
-    "image": "images/mupirocin.jpg"
+    "image": "images-optimized/triad-cream.png"
   },
   "gentamicin": {
     "category": "Ointment/Gel",
@@ -87,16 +24,7 @@
     "description": "Topical antibiotic effective against gram-negative bacteria.",
     "frequency": "2-3 times daily", 
     "contraindications": "Aminoglycoside allergy",
-    "image": "images/gentamicin.jpg"
-  },
-  "zinc-oxide": {
-    "category": "Ointment/Gel",
-    "name": "Zinc Oxide",
-    "indication": "Periwound protection, moisture barrier",
-    "description": "Protective barrier cream for moisture-prone areas.",
-    "frequency": "As needed",
-    "contraindications": "None significant",
-    "image": "images/zinc-oxide.jpg"
+    "image": "images-optimized/gentamicin.jpg"
   },
   "calmoseptine": {
     "category": "Ointment/Gel", 
@@ -105,70 +33,16 @@
     "description": "Moisture barrier and antiseptic for irritated skin. zinc oxide and menthol",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/calmoseptine.jpg"
+    "image": "images-optimized/calmoseptine.jpg"
   },
-  "ad-ointment": {
+  "medihoney-gel": {
     "category": "Ointment/Gel",
-    "name": "A&D Ointment",
-    "indication": "Minor skin irritation, early skin breakdown",
-    "description": "Vitamin-enriched ointment for minor skin protection.",
-    "frequency": "As needed",
-    "contraindications": "None significant", 
-    "image": "images/ad-ointment.jpg"
-  },
-  "desitin": {
-    "category": "Ointment/Gel",
-    "name": "Desitin",
-    "indication": "Skin barrier for moisture-prone areas",
-    "description": "Zinc oxide-based barrier cream for diaper rash and moisture protection.",
-    "frequency": "As needed",
-    "contraindications": "None significant",
-    "image": "images/zinc-oxide.jpg"
-  },
-  "aquaphor": {
-    "category": "Ointment/Gel",
-    "name": "Aquaphor",
-    "indication": "Dry skin, friction areas, minor wounds", 
-    "description": "Occlusive healing ointment for dry and damaged skin.",
-    "frequency": "As needed",
-    "contraindications": "None significant",
-    "image": "images/aquaphor.jpg"
-  },
-  "vaseline": {
-    "category": "Ointment/Gel",
-    "name": "Vaseline",
-    "indication": "Occlusive moisture barrier",
-    "description": "Pure petroleum jelly for occlusive moisture barrier.",
-    "frequency": "As needed", 
-    "contraindications": "None significant",
-    "image": "images/vaseline.jpg"
-  },
-  "medihoney-alginate": {
-    "category": "Filler/Medicated",
-    "name": "Medihoney Alginate",
-    "indication": "Medical-grade honey alginate",
-    "description": "Absorbs drainage and dissolves. Can fill tunnels. Rip or cut to fit. Storeroom (#103872 small, #103873 large).",
-    "frequency": "1-3 days",
-    "contraindications": "Honey allergies, dry wounds",
-    "image": "images/medihoney-alginate.jpg"
-  },
-  "gelling-fiber": {
-    "category": "Filler/Medicated",
-    "name": "Gelling Fiber",
-    "indication": "Exufiber/Aquacel - Alginate with silver/rope",
-    "description": "Absorbs drainage and becomes gel. Ribbon for deep tunnels. Storeroom (Aquacel #112580, Exufiber #201580).",
-    "frequency": "1-3 days", 
-    "contraindications": "Dry wounds",
-    "image": "images/gelling-fiber.jpg"
-  },
-  "hydrofera-blue": {
-    "category": "Filler/Medicated",
-    "name": "Hydrofera Blue",
-    "indication": "Methylene Blue/Gentian Violet Foam",
-    "description": "Blue foam, absorbs drainage. Plain blue side touches wound. Obtain extra from SWAT.",
-    "frequency": "1-3 days",
-    "contraindications": "Dry wounds",
-    "image": "images/hydrofera-blue.jpg"
+    "name": "Medihoney Gel",
+    "indication": "Medical-grade honey gel",
+    "description": "Promotes debridement and reduction of bioburden. Available on unit carts.",
+    "frequency": "Daily",
+    "contraindications": "Honey allergies",
+    "image": "images-optimized/medihoney-gel.jpg"
   },
   "xeroform": {
     "category": "Filler/Medicated",
@@ -177,43 +51,16 @@
     "description": "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts.",
     "frequency": "Daily",
     "contraindications": "Bismuth sensitivity",
-    "image": "images/xeroform.jpg"
+    "image": "images-optimized/xeroform.jpg"
   },
-  "prisma-promogran": {
+  "hydrofera-blue": {
     "category": "Filler/Medicated",
-    "name": "Prisma Promogran",
-    "indication": "Collagen with Silver",
-    "description": "Dissolvable collagen matrix. Rip or cut to fit, premoisten before applying. Storeroom #135917.",
-    "frequency": "Weekly",
-    "contraindications": "Silver allergies",
-    "image": "images/prisma-promogran.jpg"
-  },
-  "silvasorb": {
-    "category": "Filler/Medicated",
-    "name": "Silvasorb",
-    "indication": "Dry or desiccated wounds, superficial burns",
-    "description": "Silver-impregnated gauze. Maintains moist wound bed, promotes autolytic debridement. Avoid in infected wounds.",
+    "name": "Hydrofera Blue",
+    "indication": "Methylene Blue/Gentian Violet Foam",
+    "description": "Blue foam, absorbs drainage. Plain blue side touches wound. Obtain extra from SWAT.",
     "frequency": "1-3 days",
-    "contraindications": "Silver allergy, infected wounds",
-    "image": "images/silvasorb.jpg"
-  },
-  "alginates-silver": {
-    "category": "Filler/Medicated",
-    "name": "Alginates/Silver & Calcium/Supersorb",
-    "indication": "Heavily draining ulcers/wounds",
-    "description": "Silver AG is antimicrobial. Helps with draining/bleeding wounds. Comes in sheets, strips, fluff, and rope.",
-    "frequency": "1-3 days",
-    "contraindications": "Dry wounds, silver allergy",
-    "image": "images/alginates-silver.jpg"
-  },
-  "aquacel-ag": {
-    "category": "Filler/Medicated", 
-    "name": "Aquacel Ag/Opticel",
-    "indication": "Heavily exudative or bleeding wounds",
-    "description": "Converts exudate into gel, promoting moist healing. Requires secondary dressing. Not ideal for dry wounds.",
-    "frequency": "1-3 days",
-    "contraindications": "Dry wounds, silver allergy",
-    "image": "images/aquacel-ag.jpg"
+    "contraindications": "Dry wounds",
+    "image": "images-optimized/hydrofera-blue.jpg"
   },
   "adaptic": {
     "category": "Filler/Medicated",
@@ -222,52 +69,7 @@
     "description": "Nonadherent contact layer. Use when minimizing trauma during dressing changes is important. Apply over ointments if needed.",
     "frequency": "Daily",
     "contraindications": "None significant",
-    "image": "images/adaptic.jpg"
-  },
-  "mepilex": {
-    "category": "Cover",
-    "name": "Allevyn",
-    "indication": "Foam-Bordered or Foam-Borderless",
-    "description": "Absorbent cover dressing. Variety of sizes. Aggressive adhesive—use caution when removing. Available on unit carts.",
-    "frequency": "2-3 days",
-    "contraindications": "Fragile skin",
-    "image": "images/allevyn.png"
-  },
-  "tegaderm-absorbent": {
-    "category": "Cover",
-    "name": "Tegaderm Absorbent",
-    "indication": "Transparent Film-Absorbent",
-    "description": "For shallow wounds—first-line treatment for skin tears. Can be left in place for 1 week. Gentle adhesive. Available on unit carts/Pyxis.",
-    "frequency": "Weekly",
-    "contraindications": "Heavy exudate",
-    "image": "images/tegaderm-absorbent.jpg"
-  },
-  "duoderm": {
-    "category": "Cover",
-    "name": "DuoDerm",
-    "indication": "Hydrocolloid",
-    "description": "For shallow wounds with minimal exudate. Also comes in Medihoney version (Medihoney HCS storeroom #147573).",
-    "frequency": "3-7 days",
-    "contraindications": "Heavy exudate, infection",
-    "image": "images/duoderm.jpg"
-  },
-  "abd-gauze": {
-    "category": "Cover",
-    "name": "ABD & Rolled Gauze",
-    "indication": "Non-adherent gauze",
-    "description": "Best for large areas, limbs, or dressings that require frequent changing. Available on unit carts.",
-    "frequency": "Daily",
-    "contraindications": "None significant",
-    "image": "images/abd-gauze.jpg"
-  },
-  "telfa-pads": {
-    "category": "Cover",
-    "name": "Telfa Pads",
-    "indication": "Moist, superficial wounds", 
-    "description": "Nonstick surface for moist, superficial wounds. Often paired with secondary gauze wrap.",
-    "frequency": "Daily",
-    "contraindications": "None significant",
-    "image": "images/telfa-pads.jpg"
+    "image": "images-optimized/adaptic.jpg"
   },
   "abd-pads": {
     "category": "Cover",
@@ -276,7 +78,7 @@
     "description": "Layer of absorption. Not a primary dressing. Used over packing or as pressure padding.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/abd-pads.jpg"
+    "image": "images-optimized/abd-pads.jpg"
   },
   "kerlix-wrap": {
     "category": "Cover",
@@ -285,61 +87,7 @@
     "description": "Stretch gauze; allows breathable coverage. Can be used with saline as wet-to-dry dressing base.",
     "frequency": "As needed",
     "contraindications": "None significant", 
-    "image": "images/kerlix.png"
-  },
-  "coban-ace": {
-    "category": "Cover",
-    "name": "Coban/ACE",
-    "indication": "Compression therapy, wound support",
-    "description": "Apply with caution; can impair circulation if wrapped too tightly. Use for edema or venous ulcers.",
-    "frequency": "As directed",
-    "contraindications": "Arterial insufficiency",
-    "image": "images/coban.png"
-  },
-  "netting-stockinette": {
-    "category": "Cover", 
-    "name": "Netting/Stockinette",
-    "indication": "Dressings on limbs or mobile areas",
-    "description": "Elastic material that allows easy visual inspection of the wound while holding dressing in place.",
-    "frequency": "As needed",
-    "contraindications": "None significant",
-    "image": "images/netting-stockinette.jpg"
-  },
-  "tegaderm-film": {
-    "category": "Cover",
-    "name": "Tegaderm Film",
-    "indication": "Minor wounds, donor sites, abrasions",
-    "description": "Transparent film, protects shallow wounds.",
-    "frequency": "3-7 days",
-    "contraindications": "Heavy exudate",
-    "image": "images/tegaderm.png"
-  },
-  "foam-silicone": {
-    "category": "Cover",
-    "name": "Foam/Silicone Bordered",
-    "indication": "Moderate drainage wounds",
-    "description": "Cushions & absorbs moderate drainage, water resistant outside.",
-    "frequency": "2-3 days",
-    "contraindications": "Heavy exudate",
-    "image": "images/foam-silicone.png"
-  },
-  "island-dressing": {
-    "category": "Cover",
-    "name": "Bordered Gauze/Island Dressing",
-    "indication": "General wound coverage",
-    "description": "An adhesive edge with a nonadherent center to help hold the primary dressing in place and keep medications on.",
-    "frequency": "1-3 days",
-    "contraindications": "Fragile skin",
-    "image": "images/bordered-gauze.png"
-  },
-  "super-absorbent": {
-    "category": "Cover",
-    "name": "Super Absorbent Dressing",
-    "indication": "Heavily draining wounds",
-    "description": "Absorbs excess amounts of drainage/blood.",
-    "frequency": "1-2 days",
-    "contraindications": "Dry wounds",
-    "image": "images/super-absorbent.jpg"
+    "image": "images-optimized/kerlix.png"
   },
   "compression-k2-dual": {
     "category": "Catalog-Review",
@@ -348,7 +96,7 @@
     "description": "Two-layer compression system for venous insufficiency and edema management.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency, infection",
-    "image": "images/compression-k2.png"
+    "image": "images-optimized/compression-k2.jpg"
   },
   "compression-k2-lite": {
     "category": "Catalog-Review",
@@ -357,7 +105,7 @@
     "description": "Lighter compression system for sensitive patients or mild edema.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency",
-    "image": "images/compression-k2-lite.jpg"
+    "image": "images-optimized/compression-k2-lite.png"
   },
   "adhesive-remover": {
     "category": "Catalog-Review",
@@ -366,7 +114,7 @@
     "description": "Gentle removal of adhesive residue from skin without trauma.",
     "frequency": "As needed",
     "contraindications": "Open wounds",
-    "image": "images/adhesive-remover.jpg"
+    "image": "images-optimized/adhesive-remover.jpg"
   },
   "alcohol-prep": {
     "category": "Catalog-Review",
@@ -375,7 +123,7 @@
     "description": "70% isopropyl alcohol for skin preparation and antisepsis.",
     "frequency": "As needed",
     "contraindications": "Open wounds, mucous membranes",
-    "image": "images/alcohol-prep.jpg"
+    "image": "images-optimized/alcohol-prep.jpg"
   },
   "calcium-alginate-plain": {
     "category": "Catalog-Review",
@@ -384,7 +132,7 @@
     "description": "Non-silver alginate dressing for absorbing wound drainage.",
     "frequency": "1-3 days",
     "contraindications": "Dry wounds",
-    "image": "images/calcium-alginate.jpg"
+    "image": "images-optimized/calcium-alginate.jpg"
   },
   "hydrofera-blue-ready": {
     "category": "Catalog-Review",
@@ -393,7 +141,7 @@
     "description": "Ready-to-use antimicrobial foam with methylene blue and gentian violet.",
     "frequency": "1-3 days",
     "contraindications": "Dry wounds, known allergies",
-    "image": "images/hydrofera-blue-ready.jpg"
+    "image": "images-optimized/hydrofera-blue-ready.jpg"
   },
   "antifungal-cream": {
     "category": "Catalog-Review",
@@ -402,7 +150,7 @@
     "description": "Topical antifungal for treating superficial fungal infections.",
     "frequency": "2-3 times daily",
     "contraindications": "Known hypersensitivity",
-    "image": "images/antifungal-cream.jpg"
+    "image": "images-optimized/antifungal-cream.jpg"
   },
   "benzoin-tincture": {
     "category": "Catalog-Review",
@@ -411,7 +159,7 @@
     "description": "Enhances tape/dressing adhesion and protects skin from moisture.",
     "frequency": "As needed",
     "contraindications": "Broken skin",
-    "image": "images/benzoin.jpg"
+    "image": "images-optimized/benzoin.jpg"
   },
   "biopsy-punch": {
     "category": "Catalog-Review",
@@ -420,7 +168,7 @@
     "description": "Sterile disposable punches for skin biopsy procedures.",
     "frequency": "Single use",
     "contraindications": "Bleeding disorders",
-    "image": "images/biopsy-punch.jpg"
+    "image": "images-optimized/biopsy-punch.jpg"
   },
   "cohesive-bandage-tan": {
     "category": "Catalog-Review",
@@ -429,7 +177,7 @@
     "description": "Self-adhering elastic wrap that sticks to itself, not skin.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/cohesive-tan.jpg"
+    "image": "images-optimized/cohesive-tan.jpg"
   },
   "calmoseptine-catalog": {
     "category": "Catalog-Review",
@@ -438,7 +186,7 @@
     "description": "Small tube format of moisture barrier and antiseptic ointment.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/calmoseptine-small.jpg"
+    "image": "images-optimized/calmoseptine-small.jpg"
   },
   "fibracol-collagen": {
     "category": "Catalog-Review",
@@ -447,7 +195,7 @@
     "description": "Collagen matrix dressing that supports wound healing and tissue regeneration.",
     "frequency": "Weekly",
     "contraindications": "Infected wounds",
-    "image": "images/fibracol.jpg"
+    "image": "images-optimized/fibracol.jpg"
   },
   "conform-bandage": {
     "category": "Catalog-Review",
@@ -456,7 +204,7 @@
     "description": "Lightweight stretch bandage for securing dressings without constriction.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/conform.jpg"
+    "image": "images-optimized/conform.jpg"
   },
   "dermal-curette-2mm": {
     "category": "Catalog-Review",
@@ -465,7 +213,7 @@
     "description": "Disposable curette for gentle tissue debridement and sampling.",
     "frequency": "Single use",
     "contraindications": "Deep wounds",
-    "image": "images/curette-2mm.jpg"
+    "image": "images-optimized/curette-2mm.jpg"
   },
   "dermal-curette-4mm": {
     "category": "Catalog-Review",
@@ -474,7 +222,7 @@
     "description": "Disposable curette for tissue debridement of larger areas.",
     "frequency": "Single use",
     "contraindications": "Deep wounds",
-    "image": "images/curette-4mm.jpg"
+    "image": "images-optimized/curette-4mm.jpg"
   },
   "underpad-absorbent": {
     "category": "Catalog-Review",
@@ -483,7 +231,7 @@
     "description": "Disposable underpad for protecting surfaces during procedures.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/underpad.jpg"
+    "image": "images-optimized/underpad.jpg"
   },
   "hypafix-tape": {
     "category": "Catalog-Review",
@@ -492,7 +240,7 @@
     "description": "Wide adhesive tape for securing large or awkwardly placed dressings.",
     "frequency": "As needed",
     "contraindications": "Fragile skin",
-    "image": "images/hypafix.jpg"
+    "image": "images-optimized/hypafix.jpg"
   },
   "tubular-net-sz6": {
     "category": "Catalog-Review",
@@ -501,7 +249,7 @@
     "description": "Tubular elastic net for holding dressings in place on arms/legs.",
     "frequency": "As needed",
     "contraindications": "Circulation compromise",
-    "image": "images/tubular-net.jpg"
+    "image": "images-optimized/tubular-net.jpg"
   },
   "tubular-net-sz9": {
     "category": "Catalog-Review",
@@ -510,7 +258,7 @@
     "description": "Larger tubular elastic net for torso and larger body areas.",
     "frequency": "As needed",
     "contraindications": "Circulation compromise",
-    "image": "images/tubular-net-large.jpg"
+    "image": "images-optimized/tubular-net-large.jpg"
   },
   "spandagrip-e": {
     "category": "Catalog-Review",
@@ -519,7 +267,7 @@
     "description": "Graduated compression bandage for support and edema control.",
     "frequency": "Daily",
     "contraindications": "Arterial insufficiency",
-    "image": "images/spandagrip-e.jpg"
+    "image": "images-optimized/spandagrip-e.jpg"
   },
   "spandagrip-f": {
     "category": "Catalog-Review",
@@ -528,7 +276,7 @@
     "description": "Medium compression bandage for moderate edema and support.",
     "frequency": "Daily",
     "contraindications": "Arterial insufficiency",
-    "image": "images/spandagrip-f.jpg"
+    "image": "images-optimized/spandagrip-f.jpg"
   },
   "spandagrip-g": {
     "category": "Catalog-Review",
@@ -537,25 +285,25 @@
     "description": "Higher compression bandage for significant edema management.",
     "frequency": "Daily",
     "contraindications": "Arterial insufficiency",
-    "image": "images/spandagrip-g.jpg"
+    "image": "images-optimized/spandagrip-g.jpg"
   },
-  "allevy-lite-4x4": {
+  "allevy-life-4x4": {
     "category": "Catalog-Review",
     "name": "Allevyn Life Lite Silicone 4x4",
     "indication": "Light exudate wounds",
     "description": "Thin silicone foam dressing for wounds with minimal drainage.",
     "frequency": "2-3 days",
     "contraindications": "Heavy exudate",
-    "image": "images/allevyn-life.jpg"
+    "image": "images-optimized/allevyn-life.jpg"
   },
-  "allevy-lite-larger": {
+  "allevy-life-larger": {
     "category": "Catalog-Review",
     "name": "Allevyn Life Lite Silicone (Large)",
     "indication": "Light exudate wounds (large)",
     "description": "Larger thin silicone foam dressing for bigger wound areas.",
     "frequency": "2-3 days",
     "contraindications": "Heavy exudate",
-    "image": "images/allevyn-life-large.jpg"
+    "image": "images-optimized/allevyn-life-large.jpg"
   },
   "silicone-foam-6x6": {
     "category": "Catalog-Review",
@@ -564,7 +312,7 @@
     "description": "Larger bordered silicone foam for moderate drainage wounds.",
     "frequency": "2-3 days",
     "contraindications": "Heavy exudate",
-    "image": "images/silicone-foam-6x6.jpg"
+    "image": "images-optimized/silicone-foam-6x6.jpg"
   },
   "silicone-foam-3x3": {
     "category": "Catalog-Review",
@@ -573,7 +321,7 @@
     "description": "Small bordered silicone foam for smaller wounds with moderate drainage.",
     "frequency": "2-3 days",
     "contraindications": "Heavy exudate",
-    "image": "images/silicone-foam-3x3.jpg"
+    "image": "images-optimized/silicone-foam-3x3.jpg"
   },
   "hydrocellular-foam": {
     "category": "Catalog-Review",
@@ -582,7 +330,7 @@
     "description": "Non-adherent foam dressing that requires secondary dressing.",
     "frequency": "1-3 days",
     "contraindications": "Dry wounds",
-    "image": "images/hydrocellular.jpg"
+    "image": "images-optimized/hydrocellular.jpg"
   },
   "gauze-sponge-2x2": {
     "category": "Catalog-Review",
@@ -591,7 +339,7 @@
     "description": "Small sterile gauze sponges for wound care and cleaning.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/gauze-2x2.jpg"
+    "image": "images-optimized/gauze-2x2.jpg"
   },
   "drape-sheet": {
     "category": "Catalog-Review",
@@ -600,7 +348,7 @@
     "description": "Sterile drape for creating sterile field during procedures.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/drape-sheet.jpg"
+    "image": "images-optimized/drape-sheet.jpg"
   },
   "hydrocortisone-cream": {
     "category": "Catalog-Review",
@@ -609,7 +357,7 @@
     "description": "Mid-potency topical steroid for inflammatory dermatoses.",
     "frequency": "1-2 times daily",
     "contraindications": "Viral/fungal infections, thin skin",
-    "image": "images/hydrocortisone.jpg"
+    "image": "images-optimized/hydrocortisone.jpg"
   },
   "catalog-hydrogel": {
     "category": "Catalog-Review",
@@ -618,7 +366,7 @@
     "description": "Amorphous hydrogel for adding moisture to dry wounds.",
     "frequency": "Daily",
     "contraindications": "Heavy exudate",
-    "image": "images/hydrogel-amorphous.jpg"
+    "image": "images-optimized/hydrogel-amorphous.jpg"
   },
   "saline-irrigation": {
     "category": "Catalog-Review",
@@ -627,7 +375,7 @@
     "description": "Sterile 0.9% sodium chloride for wound irrigation and cleaning.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/saline-irrigation.jpg"
+    "image": "images-optimized/saline-irrigation.jpg"
   },
   "island-border-gauze": {
     "category": "Catalog-Review",
@@ -636,7 +384,7 @@
     "description": "Sterile bordered gauze dressing with adhesive perimeter.",
     "frequency": "Daily",
     "contraindications": "Fragile skin",
-    "image": "images/island-border.jpg"
+    "image": "images-optimized/island-border.jpg"
   },
   "lidocaine-ointment": {
     "category": "Catalog-Review",
@@ -645,7 +393,7 @@
     "description": "Local anesthetic ointment for pain relief during wound care.",
     "frequency": "As needed",
     "contraindications": "Lidocaine allergy, broken skin",
-    "image": "images/lidocaine-5.jpg"
+    "image": "images-optimized/lidocaine-5.jpg"
   },
   "silver-nitrate": {
     "category": "Catalog-Review",
@@ -654,7 +402,7 @@
     "description": "Caustic applicators for cauterizing small bleeding points and hypergranulation.",
     "frequency": "As needed",
     "contraindications": "Large wounds, systemic absorption risk",
-    "image": "images/silver-nitrate.jpg"
+    "image": "images-optimized/silver-nitrate.jpg"
   },
   "paper-tape": {
     "category": "Catalog-Review",
@@ -663,7 +411,7 @@
     "description": "Hypoallergenic paper tape for sensitive skin applications.",
     "frequency": "As needed",
     "contraindications": "Wet environments",
-    "image": "images/paper-tape.jpg"
+    "image": "images-optimized/paper-tape.jpg"
   },
   "nystatin-powder": {
     "category": "Catalog-Review",
@@ -672,7 +420,7 @@
     "description": "Antifungal powder for treating candida infections in skin folds.",
     "frequency": "2-3 times daily",
     "contraindications": "Known hypersensitivity",
-    "image": "images/nystatin-powder.jpg"
+    "image": "images-optimized/nystatin-powder.jpg"
   },
   "ostomy-ring": {
     "category": "Catalog-Review",
@@ -681,34 +429,7 @@
     "description": "Moldable ring for improving ostomy appliance seal and preventing leakage.",
     "frequency": "With appliance changes",
     "contraindications": "Skin sensitivity",
-    "image": "images/ostomy-ring.jpg"
-  },
-  "pillowcase-disposable": {
-    "category": "Catalog-Review",
-    "name": "Disposable Pillowcase",
-    "indication": "Infection control",
-    "description": "Single-use pillowcase for infection control in patient care areas.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": "images/disposable-pillowcase.jpg"
-  },
-  "pillow-microvent": {
-    "category": "Catalog-Review",
-    "name": "Microvent Reusable Pillow",
-    "indication": "Patient positioning",
-    "description": "Reusable pillow with microvent technology for patient comfort.",
-    "frequency": "Reusable",
-    "contraindications": "None significant",
-    "image": "images/microvent-pillow.jpg"
-  },
-  "procedure-mask": {
-    "category": "Catalog-Review",
-    "name": "Procedure Mask ASTM Level 1",
-    "indication": "Standard precautions",
-    "description": "ASTM Level 1 procedure mask for routine patient care.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": "images/procedure-mask.jpg"
+    "image": "images-optimized/ostomy-ring.jpg"
   },
   "procedure-towel": {
     "category": "Catalog-Review",
@@ -717,7 +438,7 @@
     "description": "Disposable 3-ply towel with poly backing for procedures.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/procedure-towel.jpg"
+    "image": "images-optimized/procedure-towel.jpg"
   },
   "povidone-prep": {
     "category": "Catalog-Review",
@@ -726,7 +447,7 @@
     "description": "10% povidone iodine prep pads for surgical site preparation.",
     "frequency": "As needed",
     "contraindications": "Iodine allergy, thyroid disorders",
-    "image": "images/povidone-prep.jpg"
+    "image": "images-optimized/povidone-prep.jpg"
   },
   "calcium-alginate-ag": {
     "category": "Catalog-Review",
@@ -735,7 +456,7 @@
     "description": "Silver-impregnated calcium alginate for antimicrobial wound management.",
     "frequency": "1-3 days",
     "contraindications": "Dry wounds, silver allergy",
-    "image": "images/calcium-alginate-ag.jpg"
+    "image": "images-optimized/calcium-alginate-ag.jpg"
   },
   "gelling-fiber-ag-rope": {
     "category": "Catalog-Review",
@@ -744,7 +465,7 @@
     "description": "High-absorbent silver gelling fiber in rope form for tunnels and undermining.",
     "frequency": "1-3 days",
     "contraindications": "Dry wounds, silver allergy",
-    "image": "images/gelling-fiber-rope.jpg"
+    "image": "images-optimized/gelling-fiber-rope.jpg"
   },
   "skin-prep-wipes": {
     "category": "Catalog-Review",
@@ -753,7 +474,7 @@
     "description": "Protective barrier wipes that enhance adhesion without stinging.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/skin-prep.jpg"
+    "image": "images-optimized/skin-prep.jpg"
   },
   "skin-closure-strips": {
     "category": "Catalog-Review",
@@ -762,7 +483,7 @@
     "description": "Sterile adhesive strips for closing minor lacerations and incisions.",
     "frequency": "Until healing",
     "contraindications": "Infected wounds, high tension areas",
-    "image": "images/closure-strips.jpg"
+    "image": "images-optimized/closure-strips.jpg"
   },
   "staple-remover": {
     "category": "Catalog-Review",
@@ -771,7 +492,7 @@
     "description": "Sterile staple remover with prep materials for safe staple removal.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/staple-remover.jpg"
+    "image": "images-optimized/staple-remover.jpg"
   },
   "saline-inhalation": {
     "category": "Catalog-Review",
@@ -780,7 +501,7 @@
     "description": "0.9% saline for nebulization and respiratory treatments.",
     "frequency": "As prescribed",
     "contraindications": "None significant",
-    "image": "images/saline-inhalation.jpg"
+    "image": "images-optimized/saline-inhalation.jpg"
   },
   "xtrasorb-dressing": {
     "category": "Catalog-Review",
@@ -789,7 +510,7 @@
     "description": "Super absorbent dressing for managing high levels of wound exudate.",
     "frequency": "1-2 days",
     "contraindications": "Dry wounds",
-    "image": "images/xtrasorb.jpg"
+    "image": "images-optimized/xtrasorb.jpg"
   },
   "sanicloth-wipes": {
     "category": "Catalog-Review",
@@ -798,7 +519,7 @@
     "description": "Broad-spectrum disinfectant wipes for equipment and surface cleaning.",
     "frequency": "As needed",
     "contraindications": "Direct skin contact",
-    "image": "images/sanicloth.jpg"
+    "image": "images-optimized/sanicloth.jpg"
   },
   "surgical-blade-15": {
     "category": "Catalog-Review",
@@ -807,7 +528,7 @@
     "description": "Sterile disposable surgical blade for debridement and minor procedures.",
     "frequency": "Single use",
     "contraindications": "Bleeding disorders",
-    "image": "images/blade-15.jpg"
+    "image": "images-optimized/blade-15.jpg"
   },
   "suture-removal-tray": {
     "category": "Catalog-Review",
@@ -816,7 +537,7 @@
     "description": "Sterile tray with instruments for safe suture removal procedures.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/suture-removal.jpg"
+    "image": "images-optimized/suture-removal.jpg"
   },
   "cotton-tip-applicators": {
     "category": "Catalog-Review",
@@ -825,7 +546,7 @@
     "description": "Sterile cotton-tipped applicators for precise medication application.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/cotton-tips.jpg"
+    "image": "images-optimized/cotton-tips.jpg"
   },
   "hydrocolloid-thin": {
     "category": "Catalog-Review",
@@ -834,7 +555,7 @@
     "description": "Thin hydrocolloid for superficial wounds with light drainage.",
     "frequency": "3-7 days",
     "contraindications": "Heavy exudate, infection",
-    "image": "images/hydrocolloid-thin.jpg"
+    "image": "images-optimized/hydrocolloid-thin.jpg"
   },
   "tongue-depressor": {
     "category": "Catalog-Review",
@@ -843,7 +564,7 @@
     "description": "Sterile wooden tongue depressors for examinations and mixing compounds.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/tongue-depressor.jpg"
+    "image": "images-optimized/tongue-depressor.jpg"
   },
   "triamcinolone-cream": {
     "category": "Catalog-Review",
@@ -852,7 +573,7 @@
     "description": "Mid-potency topical steroid for eczema and inflammatory skin conditions.",
     "frequency": "1-2 times daily",
     "contraindications": "Viral/fungal infections",
-    "image": "images/triamcinolone.jpg"
+    "image": "images-optimized/triamcinolone.jpg"
   },
   "unna-boot": {
     "category": "Catalog-Review",
@@ -861,7 +582,7 @@
     "description": "Zinc oxide-impregnated bandage with calamine for venous insufficiency.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency, infection",
-    "image": "images/unna-boot.jpg"
+    "image": "images-optimized/unna-boot-calamine.jpg"
   },
   "retention-tape-2in": {
     "category": "Catalog-Review",
@@ -870,7 +591,7 @@
     "description": "Non-woven retention tape for securing bulky or large dressings.",
     "frequency": "As needed",
     "contraindications": "Fragile skin",
-    "image": "images/retention-tape.jpg"
+    "image": "images-optimized/retention-tape.jpg"
   },
   "wound-cleanser-spray": {
     "category": "Catalog-Review",
@@ -879,7 +600,7 @@
     "description": "No-rinse wound cleanser spray for gentle wound bed preparation.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/wound-cleanser.jpg"
+    "image": "images-optimized/wound-cleanser.jpg"
   },
   "vashe-wound-wash": {
     "category": "Catalog-Review",
@@ -888,7 +609,7 @@
     "description": "Hypochlorous acid wound cleanser that's gentle yet effective.",
     "frequency": "As needed",
     "contraindications": "None significant",
-    "image": "images/vashe.png"
+    "image": "images-optimized/vashe.png"
   },
   "wound-measuring-ruler": {
     "category": "Catalog-Review",
@@ -897,25 +618,25 @@
     "description": "Disposable paper rulers for accurate wound measurement and documentation.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/wound-ruler.jpg"
+    "image": "images-optimized/wound-ruler.jpg"
   },
   "nasal-packing-iodoform": {
     "category": "Catalog-Review",
-    "name": "Iodoform Nasal Packing Strip",
+    "name": "Iodoform Packing Strip (Multiple Widths)",
     "indication": "Nasal hemorrhage control",
-    "description": "Antiseptic-impregnated packing strips for nasal bleeding control.",
+    "description": "Iodoform-impregnated packing strips. Available in 1/4\" and 1/2\".",
     "frequency": "Single use",
     "contraindications": "Iodine allergy",
-    "image": "images/nasal-packing-iodo.jpg"
+    "image": "images-optimized/nasal-packing-iodo.jpg"
   },
   "nasal-packing-plain": {
     "category": "Catalog-Review",
-    "name": "Plain Nasal Packing Strip",
+    "name": "Plain Packing Strip (Multiple Widths)",
     "indication": "Nasal support, non-antiseptic packing",
-    "description": "Non-medicated packing strips for nasal support and hemostasis.",
+    "description": "Non-medicated packing strips. Available in 1/2\" and 1\".",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/nasal-packing-plain.jpg"
+    "image": "images-optimized/nasal-packing-plain.jpg"
   },
   "gauze-sponge-4x4": {
     "category": "Catalog-Review",
@@ -924,6 +645,6 @@
     "description": "Standard sterile gauze sponges for wound care and cleaning procedures.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/gauze-4x4.jpg"
+    "image": "images-optimized/gauze-4x4.jpg"
   }
 }

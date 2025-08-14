@@ -234,5 +234,5 @@
 // Example usage with the new split file system
 #wound-care-guide(
   config-file: "wound-care-config.yaml",
-  data-file: "wound-care-data-catalog-only.json"
+  data-file: "wound-care-data-catalog-optimized.json"
 )
