@@ -476,15 +476,6 @@
     "contraindications": "Deep wounds",
     "image": "images/curette-4mm.jpg"
   },
-  "underpad-absorbent": {
-    "category": "Catalog-Review",
-    "name": "Light Absorbent Underpad",
-    "indication": "Patient positioning, fluid protection",
-    "description": "Disposable underpad for protecting surfaces during procedures.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": "images/underpad.jpg"
-  },
   "hypafix-tape": {
     "category": "Cover",
     "name": "Hypafix Retention Tape",
@@ -593,15 +584,6 @@
     "contraindications": "None significant",
     "image": "images/gauze-2x2.jpg"
   },
-  "drape-sheet": {
-    "category": "Catalog-Review",
-    "name": "Drape Sheet 40x48",
-    "indication": "Sterile field creation",
-    "description": "Sterile drape for creating sterile field during procedures.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": "images/drape-sheet.jpg"
-  },
   "hydrocortisone-cream": {
     "category": "Ointment/Gel",
     "name": "Hydrocortisone Cream 2.5%",
@@ -682,24 +664,6 @@
     "frequency": "With appliance changes",
     "contraindications": "Skin sensitivity",
     "image": "images/ostomy-ring.jpg"
-  },
-  "procedure-mask": {
-    "category": "Catalog-Review",
-    "name": "Procedure Mask ASTM Level 1",
-    "indication": "Standard precautions",
-    "description": "ASTM Level 1 procedure mask for routine patient care.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": null
-  },
-  "procedure-towel": {
-    "category": "Catalog-Review",
-    "name": "Procedure Towel 3-ply",
-    "indication": "Patient draping, fluid absorption",
-    "description": "Disposable 3-ply towel with poly backing for procedures.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": "images/procedure-towel.jpg"
   },
   "povidone-prep": {
     "category": "Catalog-Review",

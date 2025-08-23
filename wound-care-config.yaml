@@ -166,11 +166,7 @@ catalog-review:
 
     general_supplies:
       title: "General Supplies"
-      products:
-        - "underpad-absorbent"
-        - "procedure-towel"
-        - "drape-sheet"
-        - "procedure-mask"
+      products: []
 
 # Table formatting options
 table:
