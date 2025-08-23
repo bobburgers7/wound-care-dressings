@@ -1,9 +1,15 @@
 #import "@preview/codetastic:0.2.2": qrcode
 
-#let load-product-image(image-path, product-name: "") = {
+#let load-product-image(image-path, product-name: "", prefer-optimized: false) = {
+  let final-path = if prefer-optimized and image-path.starts-with("images/") {
+    image-path.replace("images/", "images-optimized/")
+  } else {
+    image-path
+  }
+  
   // Only show the actual image, no placeholder
   box(width: 60pt, height: 40pt, stroke: 0.5pt)[
-    #image(image-path, width: 60pt, height: 40pt, fit: "cover")
+    #image(final-path, width: 60pt, height: 40pt, fit: "cover")
   ]
 }
 
@@ -59,7 +65,7 @@
       let info = products-data.at(product-id)
       table-rows.push((
         // Load actual image from file - only show image if available
-        if "image" in info.keys() {
+        if "image" in info.keys() and info.image != none {
           load-product-image(info.image, product-name: info.name)
         } else {
           box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
@@ -125,7 +131,7 @@
         let info = products-data.at(product-id)
         all-rows.push((
           // Image
-          if "image" in info.keys() {
+          if "image" in info.keys() and info.image != none {
             load-product-image(info.image, product-name: info.name)
           } else {
             box(width: 60pt, height: 40pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
@@ -231,8 +237,8 @@
   ]
 }
 
-// Example usage with the new split file system
+// Example usage with the single JSON file system
 #wound-care-guide(
   config-file: "wound-care-config.yaml",
-  data-file: "wound-care-data-catalog-optimized.json"
+  data-file: "wound-care-data.json"
 )

@@ -1,9 +1,15 @@
 #import "@preview/codetastic:0.2.2": qrcode
 
-#let load-product-image(image-path, product-name: "") = {
+#let load-product-image(image-path, product-name: "", prefer-optimized: true) = {
+  let final-path = if prefer-optimized and image-path.starts-with("images/") {
+    image-path.replace("images/", "images-optimized/")
+  } else {
+    image-path
+  }
+  
   // Only show the actual image, no placeholder
   box(width: 70pt, height: 50pt, stroke: 0.5pt)[
-    #image(image-path, width: 70pt, height: 50pt, fit: "cover")
+    #image(final-path, width: 70pt, height: 50pt, fit: "cover")
   ]
 }
 
@@ -30,17 +36,30 @@
   let card-height = 80pt
   
   box(width: card-width, height: card-height)[
-    #set align(center)
-    #text(font: "Source Sans Pro", size: 8pt, weight: "bold")[#name]
-    #if image-path != none {
-      load-product-image(image-path, product-name: name)
-    } else {
-      box(width: 70pt, height: 50pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
-        #align(center + horizon)[
-          #text(size: 7pt, fill: gray)[No Image]
-        ]
-      ]
-    }
+    #grid(
+      rows: (20pt, 1fr),
+      gutter: 2pt,
+      align: center,
+      // Text area with fixed height
+      grid.cell(
+        inset: (top: 2pt),
+        align: center + horizon,
+        text(font: "Source Sans Pro", size: 8pt, weight: "bold")[#name]
+      ),
+      // Image area
+      grid.cell(
+        align: center + horizon,
+        if image-path != none {
+          load-product-image(image-path, product-name: name)
+        } else {
+          box(width: 70pt, height: 50pt, fill: rgb("#f8f8f8"), stroke: 0.5pt)[
+            #align(center + horizon)[
+              #text(size: 7pt, fill: gray)[No Image]
+            ]
+          ]
+        }
+      )
+    )
   ]
 }
 
@@ -50,12 +69,12 @@
   tagline: text[Visual reference for wound care products],
   reference-url: "", 
   data-file: "wound-care-data.json",
+  config-file: "wound-care-config.yaml",
   date: datetime(year: 2024, month: 12, day: 1),
 ) = {
-  // Load data from JSON file
+  // Load data from JSON file and config
   let wound-data = json(data-file)
-  let dressing-info = wound-data.dressing-info
-  let dressing-ids = wound-data.dressing-ids
+  let config = yaml(config-file)
   
   // Set the document's basic properties
   set document(title: title, author: author)
@@ -77,56 +96,50 @@
   intro(title: smallcaps[#title], tagline: tagline, url: reference-url)
   v(5pt, weak: true)
   
-  // Collect all products
+  // Collect all products by category
   let all-products = ()
   
-  // Add ointments and gels
-  for item in dressing-ids.ointments.topical {
-    let info = dressing-info.at(item.id)
+  // Iterate through all products and categorize them
+  for (id, info) in wound-data {
     let image-path = if "image" in info.keys() { info.image } else { none }
-    all-products.push((name: info.name, image: image-path, category: "Ointments & Gels"))
+    let category = info.category
+    all-products.push((id: id, name: info.name, image: image-path, category: category))
   }
   
-  // Add fillers and medicated dressings
-  for item in dressing-ids.fillers.medicated {
-    let info = dressing-info.at(item.id)
-    let image-path = if "image" in info.keys() { info.image } else { none }
-    all-products.push((name: info.name, image: image-path, category: "Fillers & Medicated"))
-  }
-  
-  // Add cover dressings
-  for item in dressing-ids.covers.secondary {
-    let info = dressing-info.at(item.id)
-    let image-path = if "image" in info.keys() { info.image } else { none }
-    all-products.push((name: info.name, image: image-path, category: "Cover Dressings"))
-  }
-  
-  // Group products by category
-  let categories = (
-    "Ointments & Gels": all-products.filter(p => p.category == "Ointments & Gels"),
-    "Fillers & Medicated": all-products.filter(p => p.category == "Fillers & Medicated"),
-    "Cover Dressings": all-products.filter(p => p.category == "Cover Dressings"),
+  // Group products by category - main sections
+  let main-categories = (
+    "Ointment/Gel": all-products.filter(p => p.category == "Ointment/Gel"),
+    "Filler/Medicated": all-products.filter(p => p.category == "Filler/Medicated"), 
+    "Cover": all-products.filter(p => p.category == "Cover"),
+    "Multi-Layer Compression Wrap": all-products.filter(p => p.category == "Multi-Layer Compression Wrap"),
   )
   
-  // Display each category
-  for (category-name, products) in categories {
-    if products.len() > 0 {
+  // Catalog review products organized by subcategories
+  let catalog-products = all-products.filter(p => p.category == "Catalog-Review")
+  
+  // Display main sections
+  for (section-key, section-config) in config.sections {
+    let section-products = all-products.filter(product => {
+      product.id in section-config.products
+    })
+    
+    if section-products.len() > 0 {
       // Category header
-      rect(fill: rgb("#E6F3FF"), width: 100%, inset: 6pt)[
-        #text(weight: "bold", size: 12pt)[#upper(category-name)]
+      rect(fill: rgb(section-config.at("header-color", default: "#E6F3FF")), width: 100%, inset: 6pt)[
+        #text(weight: "bold", size: 12pt)[#upper(section-config.title)]
       ]
       
       v(5pt)
       
       // Create grid of products (8 columns to fit more on landscape page)
       let columns = 8
-      let rows = calc.ceil(products.len() / columns)
+      let rows = calc.ceil(section-products.len() / columns)
       
       grid(
         columns: (1fr,) * columns,
         column-gutter: 1pt,
-        row-gutter: 1pt,
-        ..products.map(product => 
+        row-gutter: 12pt,
+        ..section-products.map(product => 
           product-card(
             name: product.name, 
             image-path: product.image
@@ -134,7 +147,51 @@
         )
       )
       
-      v(10pt)
+      v(15pt)
+    }
+  }
+  
+  // Display catalog review section if enabled
+  if config.at("catalog-review", default: (enabled: false)).enabled {
+    let catalog-config = config.at("catalog-review")
+    
+    // Main catalog header
+    rect(fill: rgb(catalog-config.at("header-color", default: "#F0F0F0")), width: 100%, inset: 6pt)[
+      #text(weight: "bold", size: 12pt)[#upper(catalog-config.title)]
+    ]
+    
+    v(5pt)
+    
+    // Display each catalog subcategory
+    for (category-key, category-config) in catalog-config.at("categories", default: (:)) {
+      let category-products = all-products.filter(product => {
+        product.id in category-config.products
+      })
+      
+      if category-products.len() > 0 {
+        // Subcategory header
+        rect(fill: rgb("#F8F8F8"), width: 100%, inset: 4pt)[
+          #text(weight: "bold", size: 11pt)[#category-config.title]
+        ]
+        
+        v(3pt)
+        
+        // Create grid of products
+        let columns = 8
+        grid(
+          columns: (1fr,) * columns,
+          column-gutter: 1pt,
+          row-gutter: 12pt,
+          ..category-products.map(product => 
+            product-card(
+              name: product.name, 
+              image-path: product.image
+            )
+          )
+        )
+        
+        v(10pt)
+      }
     }
   }
   
@@ -149,5 +206,6 @@
   title: "wound care products",
   tagline: text[Visual reference guide - names and images],
   data-file: "wound-care-data.json",
+  config-file: "wound-care-config.yaml",
   reference-url: "https://example.com/wound-care-protocols"
 )
