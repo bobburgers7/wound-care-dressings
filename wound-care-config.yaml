@@ -11,7 +11,7 @@ document:
   date:
     year: 2025
     month: 8
-    day: 12
+    day: 23
 
 # Main sections configuration - these appear in the primary guide
 sections:
@@ -37,6 +37,13 @@ sections:
       - "desitin"
       - "aquaphor"
       - "vaseline"
+      - "antifungal-cream"
+      - "calmoseptine-catalog"
+      - "hydrocortisone-cream"
+      - "triamcinolone-cream"
+      - "nystatin-powder"
+      - "lidocaine-ointment"
+      - "catalog-hydrogel"
 
   fillers:
     title: "COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS"
@@ -51,6 +58,12 @@ sections:
       - "alginates-silver"
       - "aquacel-ag"
       - "adaptic"
+      - "fibracol-collagen"
+      - "calcium-alginate-plain"
+      - "calcium-alginate-ag"
+      - "hydrofera-blue-ready"
+      - "gelling-fiber-ag-rope"
+      - "xtrasorb-dressing"
 
   covers:
     title: "COMMONLY ORDERED COVER DRESSINGS"
@@ -69,72 +82,47 @@ sections:
       - "foam-silicone"
       - "island-dressing"
       - "super-absorbent"
+      - "spandagrip-e"
+      - "spandagrip-f"
+      - "spandagrip-g"
+      - "allevy-lite-4x4"
+      - "allevy-lite-larger"
+      - "silicone-foam-6x6"
+      - "silicone-foam-3x3"
+      - "hydrocellular-foam"
+      - "hydrocolloid-thin"
+      - "hypafix-tape"
+      - "retention-tape-2in"
+      - "cohesive-bandage-tan"
+      - "conform-bandage"
+      - "island-border-gauze"
+      - "tubular-net-sz6"
+      - "tubular-net-sz9"
+
+  compression-wraps:
+    title: "MULTI-LAYER COMPRESSION WRAPS"
+    header-color: "#FFE6CC"
+    note: "Used for venous insufficiency and edema control. Ensure arterial circulation is adequate before application."
+    note_color: "#FFFACD"
+    products:
+      - "compression-k2-dual"
+      - "compression-k2-lite"
+      - "unna-boot"
 
 # Catalog review section - toggle this on/off as needed
 catalog-review:
   enabled: true  # Set to true to show catalog items in the guide
-  title: "CATALOG ITEMS FOR REVIEW"
+  title: "ADDITIONAL SUPPLIES AND TOOLS"
   header-color: "#F0F0F0"
   
-  # Organize catalog items by category for easier review
+  # Organize remaining catalog items by category
   categories:
-    compression:
-      title: "Compression Systems"
-      products:
-        - "compression-k2-dual"
-        - "compression-k2-lite"
-        - "spandagrip-e"
-        - "spandagrip-f"
-        - "spandagrip-g"
-        - "unna-boot"
-
-    medications:
-      title: "Additional Medications"
-      products:
-        - "lidocaine-ointment"
-        - "hydrocortisone-cream"
-        - "triamcinolone-cream"
-        - "nystatin-powder"
-        - "antifungal-cream"
-        - "calmoseptine-catalog"
-
-    advanced_dressings:
-      title: "Advanced/Specialty Dressings"
-      products:
-        - "fibracol-collagen"
-        - "hydrofera-blue-ready"
-        - "calcium-alginate-plain"
-        - "calcium-alginate-ag"
-        - "gelling-fiber-ag-rope"
-        - "hydrocellular-foam"
-        - "hydrocolloid-thin"
-        - "xtrasorb-dressing"
-
-    foam_silicone:
-      title: "Additional Foam/Silicone Options"
-      products:
-        - "allevy-life-4x4"
-        - "allevy-life-larger"
-        - "silicone-foam-6x6"
-        - "silicone-foam-3x3"
-
-    tapes_securing:
-      title: "Tapes & Securing Materials"
-      products:
-        - "paper-tape"
-        - "hypafix-tape"
-        - "retention-tape-2in"
-        - "cohesive-bandage-tan"
-        - "conform-bandage"
-
     wound_care_supplies:
       title: "Additional Wound Care Supplies"
       products:
-        - "catalog-hydrogel"
         - "saline-irrigation"
         - "wound-cleanser-spray"
         - "vashe-wound-wash"
-        - "island-border-gauze"
 
     instruments_tools:
       title: "Instruments & Tools"
@@ -166,8 +154,7 @@ catalog-review:
         - "cotton-tip-applicators"
         - "tongue-depressor"
         - "skin-closure-strips"
-        - "tubular-net-sz6"
-        - "tubular-net-sz9"
+        - "paper-tape"
 
     specialty_items:
       title: "Specialty Items"
@@ -183,6 +170,7 @@ catalog-review:
         - "underpad-absorbent"
         - "procedure-towel"
         - "drape-sheet"
+        - "procedure-mask"
 
 # Table formatting options
 table:

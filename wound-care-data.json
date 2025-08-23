@@ -342,22 +342,22 @@
     "image": "images/super-absorbent.jpg"
   },
   "compression-k2-dual": {
-    "category": "Catalog-Review",
-    "name": "UrgokK2 Dual Compression System",
+    "category": "Multi-Layer Compression Wrap",
+    "name": "Urgo K2 Dual Compression System",
     "indication": "Ankle compression 30-40mmHg",
     "description": "Two-layer compression system for venous insufficiency and edema management.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency, infection",
-    "image": "images/compression-k2.png"
+    "image": "images/compression-k2.jpg"
   },
   "compression-k2-lite": {
-    "category": "Catalog-Review",
-    "name": "UrgokK2 Lite Dual Compression",
+    "category": "Multi-Layer Compression Wrap",
+    "name": "Urgo K2 Lite Dual Compression",
     "indication": "Light compression therapy",
     "description": "Lighter compression system for sensitive patients or mild edema.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency",
-    "image": "images/compression-k2-lite.jpg"
+    "image": "images/compression-k2-lite.png"
   },
   "adhesive-remover": {
     "category": "Catalog-Review",
@@ -378,7 +378,7 @@
     "image": "images/alcohol-prep.jpg"
   },
   "calcium-alginate-plain": {
-    "category": "Catalog-Review",
+    "category": "Filler/Medicated",
     "name": "Calcium Alginate (Plain)",
     "indication": "Moderate to heavy exudate",
     "description": "Non-silver alginate dressing for absorbing wound drainage.",
@@ -387,7 +387,7 @@
     "image": "images/calcium-alginate.jpg"
   },
   "hydrofera-blue-ready": {
-    "category": "Catalog-Review",
+    "category": "Filler/Medicated",
     "name": "Hydrofera Blue ReadyTransfer",
     "indication": "Infected wounds, moderate exudate",
     "description": "Ready-to-use antimicrobial foam with methylene blue and gentian violet.",
@@ -396,7 +396,7 @@
     "image": "images/hydrofera-blue-ready.jpg"
   },
   "antifungal-cream": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Antifungal Cream",
     "indication": "Fungal skin infections",
     "description": "Topical antifungal for treating superficial fungal infections.",
@@ -423,7 +423,7 @@
     "image": "images/biopsy-punch.jpg"
   },
   "cohesive-bandage-tan": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Cohesive Bandage (Tan)",
     "indication": "Self-adhering wrap",
     "description": "Self-adhering elastic wrap that sticks to itself, not skin.",
@@ -432,7 +432,7 @@
     "image": "images/cohesive-tan.jpg"
   },
   "calmoseptine-catalog": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Calmoseptine Ointment 1/8oz",
     "indication": "Minor skin irritation",
     "description": "Small tube format of moisture barrier and antiseptic ointment.",
@@ -441,7 +441,7 @@
     "image": "images/calmoseptine-small.jpg"
   },
   "fibracol-collagen": {
-    "category": "Catalog-Review",
+    "category": "Filler/Medicated",
     "name": "Fibracol Collagen Dressing",
     "indication": "Chronic wounds, granulation stimulation",
     "description": "Collagen matrix dressing that supports wound healing and tissue regeneration.",
@@ -450,7 +450,7 @@
     "image": "images/fibracol.jpg"
   },
   "conform-bandage": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Conform Stretch Bandage",
     "indication": "Securing dressings",
     "description": "Lightweight stretch bandage for securing dressings without constriction.",
@@ -486,7 +486,7 @@
     "image": "images/underpad.jpg"
   },
   "hypafix-tape": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Hypafix Retention Tape",
     "indication": "Securing large dressings",
     "description": "Wide adhesive tape for securing large or awkwardly placed dressings.",
@@ -495,7 +495,7 @@
     "image": "images/hypafix.jpg"
   },
   "tubular-net-sz6": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Tubular Elastic Net Size 6",
     "indication": "Dressing retention on limbs",
     "description": "Tubular elastic net for holding dressings in place on arms/legs.",
@@ -504,7 +504,7 @@
     "image": "images/tubular-net.jpg"
   },
   "tubular-net-sz9": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Tubular Elastic Net Size 9",
     "indication": "Dressing retention on torso",
     "description": "Larger tubular elastic net for torso and larger body areas.",
@@ -513,7 +513,7 @@
     "image": "images/tubular-net-large.jpg"
   },
   "spandagrip-e": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Spandagrip Compression Size E",
     "indication": "Light compression support",
     "description": "Graduated compression bandage for support and edema control.",
@@ -522,7 +522,7 @@
     "image": "images/spandagrip-e.jpg"
   },
   "spandagrip-f": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Spandagrip Compression Size F",
     "indication": "Moderate compression support",
     "description": "Medium compression bandage for moderate edema and support.",
@@ -531,7 +531,7 @@
     "image": "images/spandagrip-f.jpg"
   },
   "spandagrip-g": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Spandagrip Compression Size G",
     "indication": "Firm compression support",
     "description": "Higher compression bandage for significant edema management.",
@@ -540,7 +540,7 @@
     "image": "images/spandagrip-g.jpg"
   },
   "allevy-lite-4x4": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Allevyn Life Lite Silicone 4x4",
     "indication": "Light exudate wounds",
     "description": "Thin silicone foam dressing for wounds with minimal drainage.",
@@ -549,7 +549,7 @@
     "image": "images/allevyn-life.jpg"
   },
   "allevy-lite-larger": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Allevyn Life Lite Silicone (Large)",
     "indication": "Light exudate wounds (large)",
     "description": "Larger thin silicone foam dressing for bigger wound areas.",
@@ -558,7 +558,7 @@
     "image": "images/allevyn-life-large.jpg"
   },
   "silicone-foam-6x6": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Silicone Foam with Border 6x6",
     "indication": "Moderate exudate wounds",
     "description": "Larger bordered silicone foam for moderate drainage wounds.",
@@ -567,7 +567,7 @@
     "image": "images/silicone-foam-6x6.jpg"
   },
   "silicone-foam-3x3": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Silicone Foam with Border 3x3",
     "indication": "Small moderate exudate wounds",
     "description": "Small bordered silicone foam for smaller wounds with moderate drainage.",
@@ -576,7 +576,7 @@
     "image": "images/silicone-foam-3x3.jpg"
   },
   "hydrocellular-foam": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Hydrocellular Non-Adherent Foam",
     "indication": "Moderate to heavy exudate",
     "description": "Non-adherent foam dressing that requires secondary dressing.",
@@ -603,7 +603,7 @@
     "image": "images/drape-sheet.jpg"
   },
   "hydrocortisone-cream": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Hydrocortisone Cream 2.5%",
     "indication": "Inflammatory skin conditions",
     "description": "Mid-potency topical steroid for inflammatory dermatoses.",
@@ -612,13 +612,13 @@
     "image": "images/hydrocortisone.jpg"
   },
   "catalog-hydrogel": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Wound Hydrogel (Amorphous)",
     "indication": "Dry wound beds",
     "description": "Amorphous hydrogel for adding moisture to dry wounds.",
     "frequency": "Daily",
     "contraindications": "Heavy exudate",
-    "image": "images/hydrogel-amorphous.jpg"
+    "image": "images/hydrogel.jpg"
   },
   "saline-irrigation": {
     "category": "Catalog-Review",
@@ -630,7 +630,7 @@
     "image": "images/saline-irrigation.jpg"
   },
   "island-border-gauze": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Island Border Gauze Dressing",
     "indication": "General wound coverage",
     "description": "Sterile bordered gauze dressing with adhesive perimeter.",
@@ -639,7 +639,7 @@
     "image": "images/island-border.jpg"
   },
   "lidocaine-ointment": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Lidocaine 5% Ointment",
     "indication": "Topical anesthesia for painful wounds",
     "description": "Local anesthetic ointment for pain relief during wound care.",
@@ -666,7 +666,7 @@
     "image": "images/paper-tape.jpg"
   },
   "nystatin-powder": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Nystatin Topical Powder",
     "indication": "Fungal infections, moisture areas",
     "description": "Antifungal powder for treating candida infections in skin folds.",
@@ -683,24 +683,6 @@
     "contraindications": "Skin sensitivity",
     "image": "images/ostomy-ring.jpg"
   },
-  "pillowcase-disposable": {
-    "category": "Catalog-Review",
-    "name": "Disposable Pillowcase",
-    "indication": "Infection control",
-    "description": "Single-use pillowcase for infection control in patient care areas.",
-    "frequency": "Single use",
-    "contraindications": "None significant",
-    "image": "images/disposable-pillowcase.jpg"
-  },
-  "pillow-microvent": {
-    "category": "Catalog-Review",
-    "name": "Microvent Reusable Pillow",
-    "indication": "Patient positioning",
-    "description": "Reusable pillow with microvent technology for patient comfort.",
-    "frequency": "Reusable",
-    "contraindications": "None significant",
-    "image": "images/microvent-pillow.jpg"
-  },
   "procedure-mask": {
     "category": "Catalog-Review",
     "name": "Procedure Mask ASTM Level 1",
@@ -708,7 +690,7 @@
     "description": "ASTM Level 1 procedure mask for routine patient care.",
     "frequency": "Single use",
     "contraindications": "None significant",
-    "image": "images/procedure-mask.jpg"
+    "image": null
   },
   "procedure-towel": {
     "category": "Catalog-Review",
@@ -729,7 +711,7 @@
     "image": "images/povidone-prep.jpg"
   },
   "calcium-alginate-ag": {
-    "category": "Catalog-Review",
+    "category": "Filler/Medicated",
     "name": "Calcium Alginate with Silver",
     "indication": "Infected wounds with heavy exudate",
     "description": "Silver-impregnated calcium alginate for antimicrobial wound management.",
@@ -738,7 +720,7 @@
     "image": "images/calcium-alginate-ag.jpg"
   },
   "gelling-fiber-ag-rope": {
-    "category": "Catalog-Review",
+    "category": "Filler/Medicated",
     "name": "Gelling Fiber with Silver (Rope)",
     "indication": "Deep tunneling wounds with infection risk",
     "description": "High-absorbent silver gelling fiber in rope form for tunnels and undermining.",
@@ -783,7 +765,7 @@
     "image": "images/saline-inhalation.jpg"
   },
   "xtrasorb-dressing": {
-    "category": "Catalog-Review",
+    "category": "Filler/Medicated",
     "name": "Xtrasorb Super Absorbent",
     "indication": "Heavily exudating wounds",
     "description": "Super absorbent dressing for managing high levels of wound exudate.",
@@ -828,7 +810,7 @@
     "image": "images/cotton-tips.jpg"
   },
   "hydrocolloid-thin": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Thin Hydrocolloid Dressing",
     "indication": "Shallow wounds, minimal exudate",
     "description": "Thin hydrocolloid for superficial wounds with light drainage.",
@@ -846,7 +828,7 @@
     "image": "images/tongue-depressor.jpg"
   },
   "triamcinolone-cream": {
-    "category": "Catalog-Review",
+    "category": "Ointment/Gel",
     "name": "Triamcinolone Acetonide 0.1% Cream",
     "indication": "Inflammatory dermatoses",
     "description": "Mid-potency topical steroid for eczema and inflammatory skin conditions.",
@@ -855,16 +837,16 @@
     "image": "images/triamcinolone.jpg"
   },
   "unna-boot": {
-    "category": "Catalog-Review",
+    "category": "Multi-Layer Compression Wrap",
     "name": "Unna Boot with Calamine",
     "indication": "Venous leg ulcers, edema control",
     "description": "Zinc oxide-impregnated bandage with calamine for venous insufficiency.",
     "frequency": "Weekly",
     "contraindications": "Arterial insufficiency, infection",
-    "image": "images/unna-boot.jpg"
+    "image": "images/unna-boot-calamine.jpg"
   },
   "retention-tape-2in": {
-    "category": "Catalog-Review",
+    "category": "Cover",
     "name": "Retention Tape 2 inch",
     "indication": "Securing large dressings",
     "description": "Non-woven retention tape for securing bulky or large dressings.",
