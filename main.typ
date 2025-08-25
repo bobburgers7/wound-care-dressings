@@ -1,6 +1,6 @@
 #import "@preview/codetastic:0.2.2": qrcode
 
-#let load-product-image(image-path, product-name: "", prefer-optimized: false) = {
+#let load-product-image(image-path, product-name: "", prefer-optimized: true) = {
   let final-path = if prefer-optimized and image-path.starts-with("images/") {
     image-path.replace("images/", "images-optimized/")
   } else {
