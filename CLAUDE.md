@@ -1,1 +1,3 @@
 - when making updates, change last revised in the yaml to the date of the change.
+- user is in Pacific Time Zone (PT/PDT)
+- ensure document version in config.yaml matches the latest version in CHANGELOG.md

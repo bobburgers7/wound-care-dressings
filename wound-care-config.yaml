@@ -11,7 +11,7 @@ document:
   date:
     year: 2025
     month: 8
-    day: 28
+    day: 29
 
 # Main sections configuration - these appear in the primary guide
 sections:
@@ -152,6 +152,6 @@ table:
 # Footer settings
 footer:
   show_version: true
-  version: "0.3.0"
+  version: "0.3.2"
   show_date: true
   font_size: "8pt"

@@ -63,21 +63,45 @@
   ]
 }
 
+#let format-changelog(changelog-content) = {
+  // Split content by lines and process
+  let lines = changelog-content.split("\n")
+  let formatted = ()
+  
+  for line in lines {
+    if line.starts-with("## Version") {
+      // Version headers
+      formatted.push([#text(size: 11pt, weight: "bold")[#line]])
+      formatted.push([])
+    } else if line.starts-with("- ") {
+      // Bullet points
+      formatted.push([#text(size: 9pt)[#line]])
+    } else if line.starts-with("  - ") {
+      // Sub-bullet points
+      formatted.push([#text(size: 8pt)[#line]])
+    } else if line.trim().len() > 0 and not line.starts-with("#") {
+      // Other content
+      formatted.push([#text(size: 9pt)[#line]])
+    }
+    // Skip empty lines and # headers
+  }
+  
+  return formatted
+}
+
 #let product-grid-guide(
-  title: "wound care products",
-  author: "Medical Team",
-  tagline: text[Visual reference for wound care products],
-  reference-url: "", 
   data-file: "wound-care-data.json",
-  config-file: "wound-care-config.yaml",
-  date: datetime(year: 2024, month: 12, day: 1),
+  config-file: "wound-care-config.yaml"
 ) = {
   // Load data from JSON file and config
   let wound-data = json(data-file)
   let config = yaml(config-file)
   
   // Set the document's basic properties
-  set document(title: title, author: author)
+  set document(
+    title: config.document.title, 
+    author: config.document.author
+  )
   set page(
     "a4", 
     flipped: true, 
@@ -85,15 +109,26 @@
     footer: context [
       #line(length: 100%, stroke: 0.5pt + gray)
       #v(3pt)
-      #text(font: "Source Sans Pro", size: 8pt, fill: gray)[
-        Last revised: #date.display("[year]-[month repr:numerical padding:zero]-[day padding:zero]") | Document version 1.0
+      #text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size: 8pt, fill: gray)[
+        #if config.footer.show_date [
+          Last revised: #datetime(
+            year: config.document.date.year, 
+            month: config.document.date.month, 
+            day: config.document.date.day
+          ).display("[year]-[month repr:numerical padding:zero]-[day padding:zero]")
+        ]
+        #if config.footer.show_version [ | Document version #config.footer.version]
         #h(1fr) Page #counter(page).display()
       ]
     ]
   )
   set text(font: "Source Sans Pro", size:16pt, number-type: "lining")
   
-  intro(title: smallcaps[#title], tagline: tagline, url: reference-url)
+  intro(
+    title: smallcaps[#config.document.title], 
+    tagline: config.document.tagline, 
+    url: config.document.at("reference-url", default: "")
+  )
   v(5pt, weak: true)
   
   // Collect all products by category
@@ -197,15 +232,27 @@
   
   v(10pt)
   text(font: "Source Sans Pro", size:9pt, number-type: "lining")[
-    *Visual Reference Only* - For detailed usage instructions, refer to the complete wound care guide at: #reference-url
+    *Visual Reference Only* - For detailed usage instructions, refer to the complete wound care guide at: #config.document.at("reference-url", default: "")
   ]
+  
+  // Add changelog section
+  pagebreak()
+  
+  text(size: 14pt, weight: "bold")[Change Log]
+  v(8pt)
+  
+  // Load and format changelog
+  let changelog-content = read("CHANGELOG.md")
+  let changelog-items = format-changelog(changelog-content)
+  
+  for item in changelog-items {
+    item
+    v(3pt)
+  }
 }
 
 // Example usage
 #product-grid-guide(
-  title: "wound care products",
-  tagline: text[Visual reference guide - names and images],
   data-file: "wound-care-data.json",
-  config-file: "wound-care-config.yaml",
-  reference-url: "https://example.com/wound-care-protocols"
+  config-file: "wound-care-config.yaml"
 )

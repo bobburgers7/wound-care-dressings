@@ -151,6 +151,32 @@
   return all-rows
 }
 
+#let format-changelog(changelog-content) = {
+  // Split content by lines and process
+  let lines = changelog-content.split("\n")
+  let formatted = ()
+  
+  for line in lines {
+    if line.starts-with("## Version") {
+      // Version headers
+      formatted.push([#text(size: 11pt, weight: "bold")[#line]])
+      formatted.push([])
+    } else if line.starts-with("- ") {
+      // Bullet points
+      formatted.push([#text(size: 9pt)[#line]])
+    } else if line.starts-with("  - ") {
+      // Sub-bullet points
+      formatted.push([#text(size: 8pt)[#line]])
+    } else if line.trim().len() > 0 and not line.starts-with("#") {
+      // Other content
+      formatted.push([#text(size: 9pt)[#line]])
+    }
+    // Skip empty lines and # headers
+  }
+  
+  return formatted
+}
+
 #let wound-care-guide(
   config-file: "wound-care-config.yaml",
   data-file: "wound-care-data.json"
@@ -235,6 +261,21 @@
     *Important:* Always assess wound bed, surrounding skin, and patient factors before selecting dressing. 
     For detailed protocols visit: #config.document.at("reference-url", default: "")
   ]
+  
+  // Add changelog section
+  pagebreak()
+  
+  text(size: 14pt, weight: "bold")[Change Log]
+  v(8pt)
+  
+  // Load and format changelog
+  let changelog-content = read("CHANGELOG.md")
+  let changelog-items = format-changelog(changelog-content)
+  
+  for item in changelog-items {
+    item
+    v(3pt)
+  }
 }
 
 // Example usage with the single JSON file system

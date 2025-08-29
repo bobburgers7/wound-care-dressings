@@ -1,3 +1,11 @@
+## Version 0.3.2 - 2025-08-29
+- Added changelog display to both main.typ and product-grid.typ documents
+- Updated product-grid.typ to use configuration-based date and version (matching main.typ)
+- Fixed compression image references to use correct .jpg extensions
+- Created optimized compression-k2.jpg and compression-k2-lite.jpg images
+- Added Pacific Time Zone notation to CLAUDE.md instructions
+- Updated document version synchronization between config and changelog
+
 ## Version 0.3.1 - 2025-08-28
 - Removed multiple wound care products from active guide and moved to removed-items file:
   - Ointments/Gels: Santyl, Silvadene, Vaseline, Aquaphor, Wound Hydrogel (Amorphous)
