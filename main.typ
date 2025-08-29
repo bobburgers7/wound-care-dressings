@@ -160,7 +160,6 @@
     if line.starts-with("## Version") {
       // Version headers
       formatted.push([#text(size: 11pt, weight: "bold")[#line]])
-      formatted.push([])
     } else if line.starts-with("- ") {
       // Bullet points
       formatted.push([#text(size: 9pt)[#line]])
@@ -185,9 +184,14 @@
   let config = yaml(config-file)
   let products-data = json(data-file)
   
-  // Set the document's basic properties
+  // Create ISO date string for filename
+  let month-str = if config.document.date.month < 10 { "0" + str(config.document.date.month) } else { str(config.document.date.month) }
+  let day-str = if config.document.date.day < 10 { "0" + str(config.document.date.day) } else { str(config.document.date.day) }
+  let iso-date = str(config.document.date.year) + "-" + month-str + "-" + day-str
+  
+  // Set the document's basic properties with date-based filename
   set document(
-    title: config.document.title, 
+    title: iso-date + "-wound-care-guide", 
     author: config.document.author
   )
   
@@ -198,7 +202,7 @@
     footer: context [
       #line(length: 100%, stroke: 0.5pt + gray)
       #v(3pt)
-      #text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size: 8pt, fill: gray)[
+      #text(font: ("Source Sans Pro", "Arial", "Helvetica"), size: 8pt, fill: gray)[
         #if config.footer.show_date [
           Last revised: #datetime(
             year: config.document.date.year, 
@@ -212,7 +216,7 @@
     ]
   )
   
-  set text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size:16pt, number-type: "lining")
+  set text(font: ("Source Sans Pro", "Arial", "Helvetica"), size:16pt, number-type: "lining")
   
   // Document header
   intro(
@@ -222,9 +226,9 @@
   )
   v(5pt, weak: true)
   
-  show grid.cell: set text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size:11pt)
+  show grid.cell: set text(font: ("Source Sans Pro", "Arial", "Helvetica"), size:11pt)
   show grid.cell: set rect(fill:none, stroke:none, inset:8pt)
-  show table.cell: set text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size: 10pt)
+  show table.cell: set text(font: ("Source Sans Pro", "Arial", "Helvetica"), size: 10pt)
   
   // Create main sections
   let all-table-rows = ()
@@ -257,7 +261,7 @@
   )
   
   v(10pt)
-  text(font: ("Source Sans Pro", "Arial", "Helvetica", "sans-serif"), size:9pt, number-type: "lining")[
+  text(font: ("Source Sans Pro", "Arial", "Helvetica"), size:9pt, number-type: "lining")[
     *Important:* Always assess wound bed, surrounding skin, and patient factors before selecting dressing. 
     For detailed protocols visit: #config.document.at("reference-url", default: "")
   ]
@@ -274,7 +278,7 @@
   
   for item in changelog-items {
     item
-    v(3pt)
+    linebreak()
   }
 }
 

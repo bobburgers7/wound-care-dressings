@@ -1,3 +1,13 @@
+## Version 0.3.5 - 2025-08-29
+- Fixed font warnings by removing unsupported "sans-serif" fallback from font declarations
+- Improved changelog spacing in PDF output for better readability
+- Optimized changelog formatting in typ files so bullet list entries weren't so far apart
+
+## Version 0.3.4 - 2025-08-29
+- Updated PDF filenames to include ISO date format (YYYY-MM-DD) at the beginning
+- Updated QR code and reference links to point to GitHub repository: https://github.com/bobburgers7/wound-care-dressings
+- Added date consistency requirements to CLAUDE.md instructions
+
 ## Version 0.3.3 - 2025-08-29
 - Renamed product names for clarity:
   - "Iodasorb / Betadine" → "Betadine"

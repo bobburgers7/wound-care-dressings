@@ -6,7 +6,7 @@ document:
   title: "Jovive Walnut Creek - wound care dressing guide"
   tagline: "Quick reference for wound care products available in clinic"
   author: "Medical Team"
-  reference-url: "https://example.com/wound-care-protocols"
+  reference-url: "https://github.com/bobburgers7/wound-care-dressings"
   show-frequency: true
   date:
     year: 2025
@@ -152,6 +152,6 @@ table:
 # Footer settings
 footer:
   show_version: true
-  version: "0.3.3"
+  version: "0.3.5"
   show_date: true
   font_size: "8pt"
