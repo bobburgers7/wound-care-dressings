@@ -37,7 +37,7 @@
   },
   "betadine": {
     "category": "Ointment/Gel",
-    "name": "Iodasorb / Betadine", 
+    "name": "Betadine", 
     "indication": "Short-term infection control",
     "description": "Broad-spectrum antiseptic. Promotes eschar formation, prevents MASD. Apply sparingly. Can delay healing if used excessively.",
     "frequency": "As needed",
@@ -109,7 +109,7 @@
   },
   "telfa-pads": {
     "category": "Cover",
-    "name": "Telfa Pads",
+    "name": "Non-adherent",
     "indication": "Moist, superficial wounds", 
     "description": "Nonstick surface for moist, superficial wounds. Often paired with secondary gauze wrap.",
     "frequency": "Daily",

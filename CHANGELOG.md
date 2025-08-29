@@ -1,3 +1,9 @@
+## Version 0.3.3 - 2025-08-29
+- Renamed product names for clarity:
+  - "Iodasorb / Betadine" → "Betadine"
+  - "Telfa Pads" → "Non-adherent"
+- Created optimized zinc-oxide.jpg image (72% size reduction)
+
 ## Version 0.3.2 - 2025-08-29
 - Added changelog display to both main.typ and product-grid.typ documents
 - Updated product-grid.typ to use configuration-based date and version (matching main.typ)
