@@ -11,7 +11,7 @@ document:
   date:
     year: 2025
     month: 8
-    day: 23
+    day: 28
 
 # Main sections configuration - these appear in the primary guide
 sections:
@@ -24,74 +24,45 @@ sections:
       - "medihoney-gel"
       - "hydrogel" 
       - "iodosorb"
-      - "santyl"
       - "collagen"
-      - "silvadene"
       - "betadine"
       - "triad-cream"
       - "mupirocin"
       - "gentamicin"
       - "zinc-oxide"
       - "calmoseptine"
-      - "ad-ointment"
-      - "desitin"
-      - "aquaphor"
-      - "vaseline"
       - "antifungal-cream"
       - "calmoseptine-catalog"
       - "hydrocortisone-cream"
       - "triamcinolone-cream"
       - "nystatin-powder"
       - "lidocaine-ointment"
-      - "catalog-hydrogel"
 
   fillers:
     title: "COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS"
     header-color: "#E6FFE6"
     products:
-      - "medihoney-alginate"
-      - "gelling-fiber"
       - "hydrofera-blue"
-      - "xeroform"
-      - "prisma-promogran"
-      - "silvasorb"
-      - "alginates-silver"
-      - "aquacel-ag"
       - "adaptic"
       - "fibracol-collagen"
       - "calcium-alginate-plain"
       - "calcium-alginate-ag"
-      - "hydrofera-blue-ready"
       - "gelling-fiber-ag-rope"
-      - "xtrasorb-dressing"
 
   covers:
     title: "COMMONLY ORDERED COVER DRESSINGS"
     header-color: "#FFE6E6"
     products:
-      - "mepilex"
-      - "tegaderm-absorbent"
-      - "duoderm"
-      - "abd-gauze"
       - "telfa-pads"
       - "abd-pads"
       - "kerlix-wrap"
-      - "coban-ace"
-      - "netting-stockinette"
-      - "tegaderm-film"
       - "foam-silicone"
-      - "island-dressing"
       - "super-absorbent"
       - "spandagrip-e"
       - "spandagrip-f"
       - "spandagrip-g"
-      - "allevy-lite-4x4"
-      - "allevy-lite-larger"
-      - "silicone-foam-6x6"
-      - "silicone-foam-3x3"
       - "hydrocellular-foam"
       - "hydrocolloid-thin"
-      - "hypafix-tape"
       - "retention-tape-2in"
       - "cohesive-bandage-tan"
       - "conform-bandage"

@@ -250,5 +250,86 @@
     "frequency": "1-2 days",
     "contraindications": "Dry wounds",
     "image": "images/super-absorbent.jpg"
+  },
+  "catalog-hydrogel": {
+    "category": "Ointment/Gel",
+    "name": "Wound Hydrogel (Amorphous)",
+    "indication": "Dry wound beds",
+    "description": "Amorphous hydrogel for adding moisture to dry wounds.",
+    "frequency": "Daily",
+    "contraindications": "Heavy exudate",
+    "image": "images/hydrogel.jpg"
+  },
+  "xeroform": {
+    "category": "Filler/Medicated",
+    "name": "Xeroform",
+    "indication": "Petroleum gauze with Bismuth",
+    "description": "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts. Replacement: oil emulsion.",
+    "frequency": "Daily",
+    "contraindications": "Bismuth sensitivity",
+    "image": "images/xeroform.jpg"
+  },
+  "hydrofera-blue-ready": {
+    "category": "Filler/Medicated",
+    "name": "Hydrofera Blue ReadyTransfer",
+    "indication": "Infected wounds, moderate exudate",
+    "description": "Ready-to-use antimicrobial foam with methylene blue and gentian violet.",
+    "frequency": "1-3 days",
+    "contraindications": "Dry wounds, known allergies",
+    "image": "images/hydrofera-blue-ready.jpg"
+  },
+  "xtrasorb-dressing": {
+    "category": "Filler/Medicated",
+    "name": "Xtrasorb Super Absorbent",
+    "indication": "Heavily exudating wounds",
+    "description": "Super absorbent dressing for managing high levels of wound exudate.",
+    "frequency": "1-2 days",
+    "contraindications": "Dry wounds",
+    "image": "images/xtrasorb.jpg"
+  },
+  "hypafix-tape": {
+    "category": "Cover",
+    "name": "Hypafix Retention Tape",
+    "indication": "Securing large dressings",
+    "description": "Wide adhesive tape for securing large or awkwardly placed dressings.",
+    "frequency": "As needed",
+    "contraindications": "Fragile skin",
+    "image": "images/hypafix.jpg"
+  },
+  "allevy-lite-4x4": {
+    "category": "Cover",
+    "name": "Allevyn Life Lite Silicone 4x4",
+    "indication": "Light exudate wounds",
+    "description": "Thin silicone foam dressing for wounds with minimal drainage.",
+    "frequency": "2-3 days",
+    "contraindications": "Heavy exudate",
+    "image": "images/allevyn-life.jpg"
+  },
+  "allevy-lite-larger": {
+    "category": "Cover",
+    "name": "Allevyn Life Lite Silicone (Large)",
+    "indication": "Light exudate wounds (large)",
+    "description": "Larger thin silicone foam dressing for bigger wound areas.",
+    "frequency": "2-3 days",
+    "contraindications": "Heavy exudate",
+    "image": "images/allevyn-life-large.jpg"
+  },
+  "silicone-foam-6x6": {
+    "category": "Cover",
+    "name": "Silicone Foam with Border 6x6",
+    "indication": "Moderate exudate wounds",
+    "description": "Larger bordered silicone foam for moderate drainage wounds.",
+    "frequency": "2-3 days",
+    "contraindications": "Heavy exudate",
+    "image": "images/silicone-foam-6x6.jpg"
+  },
+  "silicone-foam-3x3": {
+    "category": "Cover",
+    "name": "Silicone Foam with Border 3x3",
+    "indication": "Small moderate exudate wounds",
+    "description": "Small bordered silicone foam for smaller wounds with moderate drainage.",
+    "frequency": "2-3 days",
+    "contraindications": "Heavy exudate",
+    "image": "images/silicone-foam-3x3.jpg"
   }
 }
