@@ -80,15 +80,6 @@
     "contraindications": "None significant",
     "image": "images/zinc-oxide.jpg"
   },
-  "calmoseptine": {
-    "category": "Ointment/Gel", 
-    "name": "Calmoseptine",
-    "indication": "Moisture protection, rashes",
-    "description": "Moisture barrier and antiseptic for irritated skin. zinc oxide and menthol",
-    "frequency": "As needed",
-    "contraindications": "None significant",
-    "image": "images/calmoseptine.jpg"
-  },
   "hydrofera-blue": {
     "category": "Filler/Medicated",
     "name": "Hydrofera Blue",
@@ -235,7 +226,7 @@
   },
   "calmoseptine-catalog": {
     "category": "Ointment/Gel",
-    "name": "Calmoseptine Ointment 1/8oz",
+    "name": "Calmoseptine",
     "indication": "Minor skin irritation",
     "description": "Small tube format of moisture barrier and antiseptic ointment.",
     "frequency": "As needed",
@@ -610,5 +601,32 @@
     "frequency": "Single use",
     "contraindications": "None significant",
     "image": "images/gauze-4x4.jpg"
+  },
+  "aquaphor": {
+    "category": "Ointment/Gel",
+    "name": "Aquaphor",
+    "indication": "Dry skin, friction areas, minor wounds",
+    "description": "Occlusive healing ointment for dry and damaged skin. Criticaid replacement.",
+    "frequency": "As needed",
+    "contraindications": "None significant",
+    "image": "images/aquaphor.jpg"
+  },
+  "gold-bond": {
+    "category": "Ointment/Gel",
+    "name": "Gold Bond",
+    "indication": "Dry skin, irritation protection",
+    "description": "Medicated powder and cream for skin protection and moisture. Sween replacement.",
+    "frequency": "As needed",
+    "contraindications": "None significant",
+    "image": "images/gold-bond.jpg"
+  },
+  "amlactin": {
+    "category": "Ointment/Gel",
+    "name": "Amlactin",
+    "indication": "Dry, rough skin",
+    "description": "Lactic acid moisturizing lotion for dry and rough skin. Urea replacement.",
+    "frequency": "Daily",
+    "contraindications": "Open wounds, broken skin",
+    "image": "images/amlactin.jpg"
   }
 }

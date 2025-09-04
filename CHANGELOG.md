@@ -1,3 +1,21 @@
+## Version 0.3.6 - 2025-09-04
+- Reorganized wound care product sections:
+  - Renamed "COMMONLY ORDERED OINTMENTS AND GELS" to "PRIMARY DRESSING OINTMENTS AND GELS"
+  - Renamed "COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS" to "PRIMARY DRESSINGS"
+  - Renamed "COMMONLY ORDERED COVER DRESSINGS" to "SECONDARY DRESSINGS"
+  - Created new "PERI-WOUND TREATMENTS" section
+  - Moved Triad, Calmoseptine, antifungal cream, hydrocortisone cream, and triamcinolone to peri-wound section
+- Removed generic "Calmoseptine" entry and renamed "Calmoseptine Ointment 1/8oz" to "Calmoseptine"
+- Removed "collagen" from primary dressing ointments section
+- Added three new peri-wound treatment products:
+  - Aquaphor (Criticaid replacement)
+  - Gold Bond (Sween replacement)
+  - Amlactin (Urea replacement)
+- Created optimized images:
+  - gold-bond.jpg (59% size reduction: 162KB → 66KB)
+  - amlactin.jpg (68% size reduction: 74KB → 24KB, converted from .jpeg)
+- Fixed page break issue in product grid: section headers now stay with their products when printing
+
 ## Version 0.3.5 - 2025-08-29
 - Fixed font warnings by removing unsupported "sans-serif" fallback from font declarations
 - Improved changelog spacing in PDF output for better readability

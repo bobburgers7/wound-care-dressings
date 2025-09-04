@@ -163,28 +163,50 @@
     })
     
     if section-products.len() > 0 {
-      // Category header
-      rect(fill: rgb(section-config.at("header-color", default: "#E6F3FF")), width: 100%, inset: 6pt)[
-        #text(weight: "bold", size: 12pt)[#upper(section-config.title)]
-      ]
-      
-      v(5pt)
-      
-      // Create grid of products (8 columns to fit more on landscape page)
       let columns = 8
-      let rows = calc.ceil(section-products.len() / columns)
       
-      grid(
-        columns: (1fr,) * columns,
-        column-gutter: 1pt,
-        row-gutter: 12pt,
-        ..section-products.map(product => 
-          product-card(
-            name: product.name, 
-            image-path: product.image
+      // Keep header with at least some content using colbreak control
+      block(breakable: false, {
+        // Category header
+        rect(fill: rgb(section-config.at("header-color", default: "#E6F3FF")), width: 100%, inset: 6pt)[
+          #text(weight: "bold", size: 12pt)[#upper(section-config.title)]
+        ]
+        
+        v(5pt)
+        
+        // Show at least first few products with header
+        let min-rows = calc.min(2, calc.ceil(section-products.len() / columns))
+        let min-products = calc.min(section-products.len(), columns * min-rows)
+        
+        grid(
+          columns: (1fr,) * columns,
+          column-gutter: 1pt,
+          row-gutter: 12pt,
+          ..section-products.slice(0, min-products).map(product => 
+            product-card(
+              name: product.name, 
+              image-path: product.image
+            )
           )
         )
-      )
+      })
+      
+      // Remaining products if any
+      if section-products.len() > columns * 2 {
+        v(5pt)
+        let remaining-products = section-products.slice(columns * 2)
+        grid(
+          columns: (1fr,) * columns,
+          column-gutter: 1pt,
+          row-gutter: 12pt,
+          ..remaining-products.map(product => 
+            product-card(
+              name: product.name, 
+              image-path: product.image
+            )
+          )
+        )
+      }
       
       v(15pt)
     }

@@ -10,13 +10,13 @@ document:
   show-frequency: true
   date:
     year: 2025
-    month: 8
-    day: 29
+    month: 9
+    day: 4
 
 # Main sections configuration - these appear in the primary guide
 sections:
   ointments:
-    title: "COMMONLY ORDERED OINTMENTS AND GELS"
+    title: "PRIMARY DRESSING OINTMENTS AND GELS"
     header-color: "#E6F3FF"
     note: "Each of these can be spread over a piece of oil emulsion gauze first, then applied to the wound, to ensure coverage of the wound bed."
     note_color: "#FFFACD"
@@ -24,22 +24,28 @@ sections:
       - "medihoney-gel"
       - "hydrogel" 
       - "iodosorb"
-      - "collagen"
       - "betadine"
-      - "triad-cream"
       - "mupirocin"
       - "gentamicin"
       - "zinc-oxide"
-      - "calmoseptine"
-      - "antifungal-cream"
-      - "calmoseptine-catalog"
-      - "hydrocortisone-cream"
-      - "triamcinolone-cream"
       - "nystatin-powder"
       - "lidocaine-ointment"
 
+  peri-wound:
+    title: "PERI-WOUND TREATMENTS"
+    header-color: "#FFF0E6"
+    products:
+      - "triad-cream"
+      - "calmoseptine-catalog"
+      - "antifungal-cream"
+      - "hydrocortisone-cream"
+      - "triamcinolone-cream"
+      - "aquaphor"
+      - "gold-bond"
+      - "amlactin"
+
   fillers:
-    title: "COMMONLY ORDERED WOUND FILLERS AND MEDICATED DRESSINGS"
+    title: "PRIMARY DRESSINGS"
     header-color: "#E6FFE6"
     products:
       - "hydrofera-blue"
@@ -50,7 +56,7 @@ sections:
       - "gelling-fiber-ag-rope"
 
   covers:
-    title: "COMMONLY ORDERED COVER DRESSINGS"
+    title: "SECONDARY DRESSINGS"
     header-color: "#FFE6E6"
     products:
       - "telfa-pads"
@@ -152,6 +158,6 @@ table:
 # Footer settings
 footer:
   show_version: true
-  version: "0.3.5"
+  version: "0.3.6"
   show_date: true
   font_size: "8pt"
