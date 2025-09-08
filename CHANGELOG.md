@@ -1,3 +1,8 @@
+## Version 0.3.7 - 2025-09-08
+- Added Xeroform back to PRIMARY DRESSINGS section
+  - Moved from removed items to active product list
+  - Positioned between Fibracol Collagen and Calcium Alginate Plain
+
 ## Version 0.3.6 - 2025-09-04
 - Reorganized wound care product sections:
   - Renamed "COMMONLY ORDERED OINTMENTS AND GELS" to "PRIMARY DRESSING OINTMENTS AND GELS"

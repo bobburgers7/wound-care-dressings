@@ -260,15 +260,6 @@
     "contraindications": "Heavy exudate",
     "image": "images/hydrogel.jpg"
   },
-  "xeroform": {
-    "category": "Filler/Medicated",
-    "name": "Xeroform",
-    "indication": "Petroleum gauze with Bismuth",
-    "description": "Non-adherent, antimicrobial sheets. Useful for skin tears, burns, painful wounds. On unit carts. Replacement: oil emulsion.",
-    "frequency": "Daily",
-    "contraindications": "Bismuth sensitivity",
-    "image": "images/xeroform.jpg"
-  },
   "hydrofera-blue-ready": {
     "category": "Filler/Medicated",
     "name": "Hydrofera Blue ReadyTransfer",
