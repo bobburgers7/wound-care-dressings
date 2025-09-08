@@ -2,3 +2,5 @@
 - user is in Pacific Time Zone (PT/PDT)
 - ensure document version in config.yaml matches the latest version in CHANGELOG.md
 - ensure dates are consistent: config.yaml date should match the latest version date in CHANGELOG.md
+- when pushing changes to GitHub, create a corresponding git release with tag matching the version number
+- upload the current dated PDF files to the release as assets so they're directly accessible
