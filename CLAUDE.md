@@ -4,3 +4,4 @@
 - ensure dates are consistent: config.yaml date should match the latest version date in CHANGELOG.md
 - when pushing changes to GitHub, create a corresponding git release with tag matching the version number
 - upload the current dated PDF files to the release as assets so they're directly accessible
+- don't include "Generated with Claude Code" attribution in release notes
